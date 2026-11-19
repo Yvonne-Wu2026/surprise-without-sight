@@ -77,8 +77,8 @@ const img = (file: string) => `${import.meta.env.BASE_URL}images/${file}`;
 export const paperMeta = {
   title: "Surprise Without Sight",
   subtitle:
-    "A co-design protocol for making blind boxes and gachapon an inclusive, fun experience for blind and low-vision young adults",
-  kind: "HF720 · Participatory Research and Design Project",
+    "A co-design protocol for making mystery boxes an inclusive, fun experience for blind and low-vision young adults",
+  kind: "Participatory Research and Design Project",
   author: "Yvonne Wu",
   course: "HF720 Internationalization and World-Ready Product Design",
   instructor: "Gary C. David, PhD",
@@ -87,7 +87,7 @@ export const paperMeta = {
 };
 
 export const designQuestion =
-  "How might blind boxes keep the thrill of not knowing while giving BLV players real agency, meaning they can choose, anticipate, reveal, collect and share on equal terms?";
+  "How might mystery boxes keep the thrill of not knowing while giving BLV players real agency, meaning they can choose, anticipate, reveal, collect and share on equal terms?";
 
 /* ── References ─────────────────────────────────────────────── */
 
@@ -159,7 +159,7 @@ export const principles: { id: string; name: string; theme: ThemeKey; definition
     name: "Inclusion",
     theme: "blush",
     definition:
-      "BLV young adults (about 18 to 30) with a range of vision, including collectors and people who have never opened a blind box. Materials are provided in each person's preferred format.",
+      "BLV young adults (about 18 to 30) with a range of vision, including collectors and people who have never opened a mystery box. Materials are provided in each person's preferred format.",
   },
   {
     id: "collaboration",
@@ -187,7 +187,7 @@ export const principles: { id: string; name: string; theme: ThemeKey; definition
     name: "Contextual understanding",
     theme: "peach",
     definition:
-      "Sessions happen around real blind boxes, real shops and real unboxing habits, not abstract discussion.",
+      "Sessions happen around real mystery boxes, real shops and real unboxing habits, not abstract discussion.",
   },
   {
     id: "advocacy",
@@ -272,7 +272,7 @@ export const conceptFamilies: (Point & { id: string })[] = [
   {
     id: "labelling",
     lead: "Equal-information labelling",
-    text: "Odds, series size and brand details appear in accessible formats (Braille, large print, a QR code with audio) so players get the same information as sighted buyers.",
+    text: "Odds, series size and brand details appear in accessible formats (Braille, large print, a QR code with audio) so BLV players get the full picture of what they are buying without needing help.",
   },
 ];
 
@@ -282,7 +282,7 @@ export const reflectionPrompts = [
   "When has a mystery purchase felt good?",
   "When has a mystery purchase felt unfair or excluding?",
   "What would “equal” feel like?",
-  "Imagine a blind box shop in ten years where everyone plays on equal terms. What is different?",
+  "Imagine a mystery box shop in ten years where everyone plays on equal terms. What is different?",
 ];
 
 /* ── Chapters ──────────────────────────────────────────────── */
@@ -296,20 +296,20 @@ export const chapters: Chapter[] = [
     paperNumber: "1",
     paperHeading: "The problem and the opportunity",
     subtitle:
-      "Blind boxes sell the thrill of not knowing. Almost every ritual around them assumes sight.",
+      "Mystery boxes sell the thrill of not knowing. Almost every ritual around them assumes sight.",
     theme: "blush",
     emblem: "question",
     preview:
-      "What blind boxes and gachapon are, why the culture around them is built for sighted players, and the design question this project asks.",
+      "What mystery boxes are, why the culture around them leaves BLV players out, and the design question this project asks.",
     sections: [
       {
         id: "what",
-        heading: "What a blind box sells",
+        heading: "What a mystery box sells",
         paperHeading: null,
         blocks: [
           {
             type: "p",
-            text: "Blind boxes, mystery bags and gachapon capsules sell one feeling: the thrill of not knowing what you will get. A blind box is a collectible sold in sealed, opaque packaging so the buyer cannot tell which design is inside until it is opened. A gachapon is the vending-machine version, in which a twist and a drop deliver a random capsule. The pleasure is not only the surprise itself but the rituals around it: shaking the box, guessing the figure, reading the series checklist, spotting a rare or “secret” variant by colour, and the visible reveal that is shared with others.",
+            text: "Mystery boxes and mystery bags sell one feeling: the thrill of not knowing what you will get. A mystery box is a collectible sold in sealed, opaque packaging so the buyer cannot tell which design is inside until it is opened. The pleasure is not only the surprise itself but the rituals around it: shaking the box, guessing the figure, reading the series checklist, spotting a rare or “secret” variant by colour, and the visible reveal that is shared with others.",
           },
           {
             type: "figure",
@@ -318,7 +318,7 @@ export const chapters: Chapter[] = [
                 src: img("blind-box-packaging.webp"),
                 width: 640,
                 height: 640,
-                alt: "A sealed, opaque orange cardboard box for the Miffy Bakery Series plush keychain blind box. The front shows a picture of Miffy in a checked apron holding a bunny-shaped bread, with the words “Bakery Series” and “Plush Keychain”. Nothing on the box reveals which of the figures is inside.",
+                alt: "A sealed, opaque orange cardboard box for the Miffy Bakery Series plush keychain mystery box. The front shows a picture of Miffy in a checked apron holding a bunny-shaped bread, with the words “Bakery Series” and “Plush Keychain”. Nothing on the box reveals which of the figures is inside.",
               },
               {
                 src: img("blind-box-series.webp"),
@@ -366,7 +366,7 @@ export const chapters: Chapter[] = [
     paperNumber: "2",
     paperHeading: "What related work tells us",
     subtitle:
-      "No one has studied blind boxes and BLV players directly, so the clues come from three neighbouring areas.",
+      "No one has studied mystery boxes and BLV players directly, so the clues come from three neighbouring areas.",
     theme: "lavender",
     emblem: "bulb",
     preview:
@@ -379,7 +379,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "I searched for work on blind boxes and BLV players directly and found none. Research on blind boxes concerns marketing and the regulation of gambling-like mechanics, not accessibility. That gap is part of the case for this project. The closest evidence comes from three neighbouring areas.",
+            text: "I searched for work on mystery boxes and BLV players directly and found none. Research on mystery boxes concerns marketing and the regulation of gambling-like mechanics, not accessibility. That gap is part of the case for this project. The closest evidence comes from three neighbouring areas.",
           },
         ],
       },
@@ -389,7 +389,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Bolesnikov, Kang and Girouard (2022) interviewed 15 BLV people about board and card games. They report themes about the properties and outcomes of inaccessible and accessible games. Their discussion of accessible games includes rulebooks that are available in accessible formats, such as Braille, and, for low-vision players, large text and high-contrast pieces. They also note that most BLV gaming accessibility research has focused on digital games, so tabletop and physical play remain under-studied. A blind box is a physical, tabletop-adjacent object, which makes this literature the most useful starting point for the “properties of accessible play” that I want participants to refine.",
+            text: "Bolesnikov, Kang and Girouard (2022) interviewed 15 BLV people about board and card games. They report themes about the properties and outcomes of inaccessible and accessible games. Their discussion of accessible games includes rulebooks that are available in accessible formats, such as Braille, and, for low-vision players, large text and high-contrast pieces. They also note that most BLV gaming accessibility research has focused on digital games, so tabletop and physical play remain under-studied. A mystery box is a physical, tabletop-adjacent object, which makes this literature the most useful starting point for the “properties of accessible play” that I want participants to refine.",
           },
         ],
       },
@@ -431,7 +431,7 @@ export const chapters: Chapter[] = [
     theme: "mint",
     emblem: "hands",
     preview:
-      "The Interaction Design Foundation's six aspects of participatory design, from inclusion to audience advocacy, applied to blind boxes.",
+      "The Interaction Design Foundation's six aspects of participatory design, from inclusion to audience advocacy, applied to mystery boxes.",
     sections: [
       {
         id: "aspects",
@@ -522,7 +522,7 @@ export const chapters: Chapter[] = [
             items: [
               {
                 lead: "Go-along unboxing (60 to 90 minutes, one to one).",
-                text: "I supply a few blind boxes and capsules from different brands. Participants open them in whatever way they normally would, and I observe and ask them to think aloud. I watch for the use of weight, shake, sound, smell and texture; remote sighted help (such as video-call assistance); and what is lost or gained.",
+                text: "I supply a few mystery boxes from different brands. Participants open them in whatever way they normally would, and I observe and ask them to think aloud. I watch for the use of weight, shake, sound, smell and texture; remote sighted help (such as video-call assistance); and what is lost or gained.",
               },
               {
                 lead: "Open interview.",
@@ -561,7 +561,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "Provocation.",
-                text: "Following the critical-play approach in the class reading, one activity is a speculative prompt (“a blind box shop in ten years where everyone plays on equal terms”) to move discussion past the fixes people already know.",
+                text: "Following the critical-play approach in the class reading, one activity is a speculative prompt (“a mystery box shop in ten years where everyone plays on equal terms”) to move discussion past the fixes people already know.",
               },
             ],
           },
@@ -605,7 +605,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "If a concept survives, I would approach a small independent maker or brand to produce a limited pilot batch. Participants would be named co-designers, and new BLV buyers would try the boxes in realistic conditions. I would also test the pilot with sighted buyers, so that inclusive features do not feel like a lesser product. The pilot must not add mechanics that intensify gambling-like behaviour such as pushing repeat purchases; participants should help set that line.",
+            text: "If a concept survives, I would approach a small independent maker or brand to produce a limited pilot batch. Participants would be named co-designers, and new BLV buyers would try the boxes in realistic conditions. The pilot must not add mechanics that intensify gambling-like behaviour such as pushing repeat purchases; participants should help set that line.",
           },
         ],
       },
@@ -626,7 +626,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "Open guidelines.",
-                text: "Publish a short, accessible set of blind-box design guidelines, free to reuse, with participants credited as they choose.",
+                text: "Publish a short, accessible set of mystery box design guidelines, free to reuse, with participants credited as they choose.",
               },
             ],
           },
@@ -666,7 +666,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "A small group cannot represent a diverse community.",
-                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. Eight to ten people cannot speak for all of them, and recruiting through organisations tends to reach people who are already connected and comfortable with research. This is relevant for an internationalisation course too: attitudes to blind boxes, gambling and disability differ across countries and legal contexts, and a protocol rooted in one place may not travel.",
+                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. Eight to ten people cannot speak for all of them, and recruiting through organisations tends to reach people who are already connected and comfortable with research. This is relevant for an internationalisation course too: attitudes to mystery boxes, gambling and disability differ across countries and legal contexts, and a protocol rooted in one place may not travel.",
               },
               {
                 lead: "Tokenism risk.",
@@ -674,7 +674,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "The product itself may be the problem.",
-                text: "Blind boxes depend on scarcity and random reward. Making them accessible could also make a gambling-like product more appealing to a group that is already marginalised. The co-design process may conclude that some mechanics should not exist, and a commercial partner may not accept that outcome.",
+                text: "Mystery boxes depend on scarcity and random reward. Making them accessible could also make a gambling-like product more appealing to a group that is already marginalised. The co-design process may conclude that some mechanics should not exist, and a commercial partner may not accept that outcome.",
               },
               {
                 lead: "The surprise-versus-agency tension may not resolve.",
@@ -686,7 +686,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "Evidence is thin.",
-                text: "There is little published research on blind boxes and accessibility, so I lean on adjacent work in tabletop games and tactile co-design. Some findings may not transfer to a retail product bought on impulse.",
+                text: "There is little published research on mystery boxes and accessibility, so I lean on adjacent work in tabletop games and tactile co-design. Some findings may not transfer to a retail product bought on impulse.",
               },
               {
                 lead: "This is untested.",
@@ -710,7 +710,7 @@ export const chapters: Chapter[] = [
     theme: "lilac",
     emblem: "moon",
     preview:
-      "Why blind boxes are a good test case for participatory design, what the protocol combines, and what a successful result would show.",
+      "Why mystery boxes are a good test case for participatory design, what the protocol combines, and what a successful result would show.",
     sections: [
       {
         id: "conclusion",
@@ -719,7 +719,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Blind boxes make a good test case for participatory design because their core appeal, surprise, seems to conflict with accessibility. Working with BLV young adults as co-researchers and co-designers is the most reliable way to find out whether that conflict is real, and which compromises people actually value. The protocol combines a six-stage structure with tactile, adapted workshop methods and a relay of cohorts, and it builds in the participant-led reflection that earlier work identified as missing. Its limits are real: a sighted designer, a small sample, commercial pressure and unproven methods. If it works, the result is not only a better product but a clearer view of how “fun” is defined, and by whom.",
+            text: "Mystery boxes make a good test case for participatory design because their core appeal, surprise, seems to conflict with accessibility. Working with BLV young adults as co-researchers and co-designers is the most reliable way to find out whether that conflict is real, and which compromises people actually value. The protocol combines a six-stage structure with tactile, adapted workshop methods and a relay of cohorts, and it builds in the participant-led reflection that earlier work identified as missing. Its limits are real: a sighted designer, a small sample, commercial pressure and unproven methods. If it works, the result is not only a better product but a clearer view of how “fun” is defined, and by whom.",
           },
         ],
       },

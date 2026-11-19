@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import { ArrowDown, BookOpen, FastForward, RotateCcw } from "lucide-react";
+import { BookOpen, FastForward, RotateCcw } from "lucide-react";
 import { MysteryBox } from "./MysteryBox";
 import { Capsule, FloatingStars, Mochi, SparkleBurst, StarShape } from "./Decor";
 import { designQuestion, paperMeta } from "@/content/research";
@@ -82,56 +82,22 @@ export function Hero() {
             className="mt-6 text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl xl:text-7xl"
           >
             Surprise{" "}
-            <span className="relative inline-block text-grape">
-              Without Sight
-              <svg
-                viewBox="0 0 300 20"
-                className="decor absolute -bottom-2 left-0 w-full"
-                aria-hidden="true"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M4 14 C60 4 120 18 180 10 S270 6 296 12"
-                  fill="none"
-                  stroke="#F5BFD3"
-                  strokeWidth="7"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+            <span className="text-grape">Without Sight</span>
           </h1>
           <p className="mt-7 text-lg leading-relaxed text-cocoa-soft sm:text-xl">
             {paperMeta.subtitle}.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href={href.explore}
-              className="group inline-flex min-h-13 items-center gap-2 rounded-full bg-cocoa px-7 font-display text-lg font-medium text-ivory shadow-pop transition hover:-translate-y-0.5 hover:bg-[#4a3838] active:translate-y-0 active:scale-[0.98]"
-            >
-              Unbox the Research
-              <ArrowDown
-                className="size-5 transition group-hover:translate-y-0.5"
-                aria-hidden="true"
-              />
-            </a>
-            <a
               href={href.paper()}
               className="inline-flex min-h-13 items-center gap-2 rounded-full bg-white px-6 font-display text-lg font-medium shadow-soft ring-1 ring-cocoa/15 transition hover:-translate-y-0.5 hover:bg-cream active:scale-[0.98]"
             >
               <BookOpen className="size-5" aria-hidden="true" />
-              Read the Full Paper
+              Read Full Paper
             </a>
           </div>
           <p className="mt-8 max-w-md text-sm text-cocoa-soft">
-            Every chapter is also available as plain text. Use <strong>Reading Mode</strong> in the
-            top bar, or the{" "}
-            <a
-              className="font-bold underline decoration-blush decoration-2 underline-offset-4"
-              href={href.paper()}
-            >
-              full paper
-            </a>
-            .
+            Click <strong>Read Full Paper</strong> if you would rather read in plain text.
           </p>
         </div>
 
@@ -301,14 +267,6 @@ export function Hero() {
                       <p className="mt-2 font-display text-lg leading-snug font-medium">
                         {designQuestion}
                       </p>
-                      <div className="pointer-events-auto mt-4 flex flex-wrap gap-2">
-                        <a
-                          href={href.explore}
-                          className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-cocoa px-4 text-sm font-bold text-ivory"
-                        >
-                          Start exploring <ArrowDown className="size-4" aria-hidden="true" />
-                        </a>
-                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

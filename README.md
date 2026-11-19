@@ -1,7 +1,7 @@
 # Surprise Without Sight
 
 HF720 participatory research and design assignment: a co-design protocol for making
-blind boxes and gachapon inclusive for blind and low-vision young adults.
+mystery boxes inclusive for blind and low-vision young adults.
 
 The site presents the paper as seven "mystery boxes" (chapters) with small interactive
 pieces (peel-to-reveal principles, unwrap-the-stages gifts, a shake-to-reveal box and a

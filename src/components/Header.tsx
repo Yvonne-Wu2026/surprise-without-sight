@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { BookOpen, ChevronDown, Menu, Sparkles, Volume2, VolumeX, X, Check } from "lucide-react";
+import { BookOpen, ChevronDown, Menu, X } from "lucide-react";
 import { chapters, paperMeta } from "@/content/research";
 import { href, type Route } from "@/lib/router";
 import { useStore } from "@/lib/store";
@@ -56,17 +56,31 @@ export function Progress({ compact }: { compact?: boolean }) {
       aria-label={`${explored.length} of ${chapters.length} boxes explored`}
       role="img"
     >
-      <div className="flex gap-1" aria-hidden="true">
+      <div className="flex gap-0.5" aria-hidden="true">
         {chapters.map((c) => {
           const done = explored.includes(c.id);
           return (
-            <span
-              key={c.id}
-              className="grid size-3.5 place-items-center rounded-[5px] ring-1 ring-cocoa/25"
-              style={{ background: done ? themes[c.theme].shade : "transparent" }}
-            >
-              {done && <Check className="size-2.5" strokeWidth={4} />}
-            </span>
+            <svg key={c.id} viewBox="0 0 24 24" className="size-4.5 overflow-visible">
+              <path
+                d="M12 20.5C6.2 16.6 2.5 13.2 2.5 8.9 2.5 6 4.7 3.8 7.4 3.8c1.9 0 3.5 1 4.6 2.6 1.1-1.6 2.7-2.6 4.6-2.6 2.7 0 4.9 2.2 4.9 5.1 0 4.3-3.7 7.7-9.5 11.6Z"
+                fill={done ? themes[c.theme].shade : "transparent"}
+                stroke={done ? themes[c.theme].ink : "rgb(91 70 70 / 0.35)"}
+                strokeWidth={1.8}
+                strokeLinejoin="round"
+                className="transition-[fill] duration-300"
+              />
+              {done && (
+                <ellipse
+                  cx="7.6"
+                  cy="8.4"
+                  rx="1.6"
+                  ry="1"
+                  fill="#fff"
+                  opacity="0.7"
+                  transform="rotate(-35 7.6 8.4)"
+                />
+              )}
+            </svg>
           );
         })}
       </div>
@@ -80,7 +94,7 @@ export function Progress({ compact }: { compact?: boolean }) {
 }
 
 export function Header({ route }: { route: Route }) {
-  const { readingMode, reducedMotion, sound, setPref, explored } = useStore();
+  const { readingMode, setPref, explored } = useStore();
   const [chaptersOpen, setChaptersOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -226,22 +240,6 @@ export function Header({ route }: { route: Route }) {
             icon={<BookOpen className="size-4" />}
             emphasis
           />
-          <div className="hidden items-center gap-2 md:flex">
-            <Switch
-              label="Reduce motion"
-              checked={reducedMotion}
-              onChange={(v) => setPref("reducedMotion", v)}
-              icon={<Sparkles className="size-4" />}
-              compact
-            />
-            <Switch
-              label="Sound"
-              checked={sound}
-              onChange={(v) => setPref("sound", v)}
-              icon={sound ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
-              compact
-            />
-          </div>
           <button
             type="button"
             className="grid size-11 place-items-center rounded-full bg-white/70 ring-1 ring-cocoa/10 lg:hidden"
@@ -274,20 +272,6 @@ export function Header({ route }: { route: Route }) {
           </div>
           <p className="px-3 pb-1 font-display text-sm font-semibold">Chapters</p>
           {chapterList}
-          <div className="mt-4 flex flex-wrap items-center gap-2 px-1 md:hidden">
-            <Switch
-              label="Reduce motion"
-              checked={reducedMotion}
-              onChange={(v) => setPref("reducedMotion", v)}
-              icon={<Sparkles className="size-4" />}
-            />
-            <Switch
-              label="Sound"
-              checked={sound}
-              onChange={(v) => setPref("sound", v)}
-              icon={sound ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
-            />
-          </div>
           <div className="mt-4 px-2">
             <Progress />
           </div>

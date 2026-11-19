@@ -43,13 +43,13 @@ function systemReducedMotion() {
 }
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [prefs, setPrefs] = useState<Prefs>(() =>
-    load<Prefs>(PREFS_KEY, {
-      reducedMotion: systemReducedMotion(),
-      readingMode: false,
-      sound: false,
-    }),
-  );
+  // Only Reading Mode has a toggle, so only it is restored. Motion follows the
+  // system setting and sound stays off.
+  const [prefs, setPrefs] = useState<Prefs>(() => ({
+    reducedMotion: systemReducedMotion(),
+    readingMode: load<{ readingMode: boolean }>(PREFS_KEY, { readingMode: false }).readingMode,
+    sound: false,
+  }));
   const [explored, setExplored] = useState<string[]>(() => {
     try {
       const raw = JSON.parse(localStorage.getItem(PROGRESS_KEY) ?? "[]");

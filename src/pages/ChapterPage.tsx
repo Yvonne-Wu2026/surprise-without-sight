@@ -8,6 +8,7 @@ import { themes } from "@/lib/theme";
 import { MysteryBox } from "@/components/MysteryBox";
 import { Citation, ContentBlock } from "@/components/ContentBlocks";
 import { FloatingStars, SparkleBurst, StarDivider } from "@/components/Decor";
+import { Progress } from "@/components/Header";
 
 type Phase = "box" | "open" | "card" | "done";
 const order: Phase[] = ["box", "open", "card", "done"];
@@ -67,17 +68,22 @@ export function ChapterPage({ chapter }: { chapter: Chapter }) {
           ]}
         />
         <div className="relative mx-auto max-w-6xl px-4 pt-6 pb-10 sm:px-6 sm:pt-8">
-          <nav aria-label="Breadcrumb" className="text-sm font-bold text-cocoa-soft">
-            <ol className="flex flex-wrap items-center gap-1.5">
-              <li>
-                <a className="underline-offset-4 hover:underline" href={href.explore}>
-                  Research Collection
-                </a>
-              </li>
-              <li aria-hidden="true">/</li>
-              <li aria-current="page">Box {chapter.number}</li>
-            </ol>
-          </nav>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <nav aria-label="Breadcrumb" className="text-sm font-bold text-cocoa-soft">
+              <ol className="flex flex-wrap items-center gap-1.5">
+                <li>
+                  <a className="underline-offset-4 hover:underline" href={href.explore}>
+                    Research Collection
+                  </a>
+                </li>
+                <li aria-hidden="true">/</li>
+                <li aria-current="page">Box {chapter.number}</li>
+              </ol>
+            </nav>
+            <div className="no-print rounded-2xl bg-white/80 px-3.5 py-2 shadow-soft">
+              <Progress />
+            </div>
+          </div>
 
           <div
             className={`mt-6 grid items-center gap-6 ${readingMode ? "" : "md:grid-cols-[13rem_1fr] md:gap-10"}`}

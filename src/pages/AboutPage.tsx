@@ -84,10 +84,9 @@ export function AboutPage() {
             single-column text.
           </li>
           <li>
-            Animation follows your system’s reduced-motion setting, and you can switch it off with
-            the Reduce motion toggle.
+            Animation follows your system’s reduced-motion setting, and Reading Mode switches it
+            off entirely.
           </li>
-          <li>Sound is off by default and never carries information on its own.</li>
           <li>
             Chapters are labelled with numbers and names as well as colours, and decorative sparkles
             are hidden from screen readers. Photographs have full text descriptions.
