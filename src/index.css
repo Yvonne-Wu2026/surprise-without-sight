@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+
+  --color-blush: #f5bfd3;
+  --color-lavender: #d8c6f2;
+  --color-mint: #c6e8db;
+  --color-butter: #fff0ce;
+  --color-peach: #ffd6c4;
+  --color-sky: #cde2f5;
+  --color-ivory: #fffaf4;
+  --color-cream: #fbf1e6;
+  --color-cocoa: #5b4646;
+  --color-cocoa-soft: #664c4c;
+  --color-berry: #9e3a64;
+  --color-grape: #5e44a0;
+
+  --shadow-soft: 0 1px 0 rgb(255 255 255 / 0.8) inset, 0 10px 30px -12px rgb(91 70 70 / 0.25);
+  --shadow-pop: 0 2px 0 rgb(255 255 255 / 0.9) inset, 0 18px 40px -16px rgb(91 70 70 / 0.35);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-ivory font-sans text-cocoa antialiased;
+    /* subtle paper grain */
+    background-image:
+      radial-gradient(rgb(91 70 70 / 0.045) 1px, transparent 1px),
+      radial-gradient(rgb(91 70 70 / 0.03) 1px, transparent 1px);
+    background-size:
+      22px 22px,
+      13px 13px;
+    background-position:
+      0 0,
+      7px 9px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 3px solid #5e44a0;
+    outline-offset: 3px;
+    border-radius: 12px;
+  }
+  ::selection {
+    background: #f5bfd3;
+    color: #3d2d2d;
+  }
+}
+
+/* Reduced motion: honour both the system setting and the in-site toggle. */
+html[data-motion="off"] {
+  scroll-behavior: auto;
+}
+html[data-motion="off"] *,
+html[data-motion="off"] *::before,
+html[data-motion="off"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Reading mode: strip decoration, keep every word. */
+html[data-reading="true"] .decor {
+  display: none !important;
+}
+html[data-reading="true"] body {
+  background-image: none;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@media print {
+  @page {
+    margin: 2cm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+  }
+  .no-print,
+  .decor,
+  header[role="banner"],
+  footer[role="contentinfo"] {
+    display: none !important;
+  }
+  .print-plain,
+  .print-plain * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    border-color: #999 !important;
+  }
+  .print-plain {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .print-plain h2 {
+    break-after: avoid;
+  }
+  .print-plain section {
+    break-inside: auto;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+}
