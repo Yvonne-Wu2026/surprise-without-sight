@@ -22,7 +22,7 @@ export type FigureImage = { src: string; alt: string; width: number; height: num
 
 type BlockBody =
   | { type: "p"; text: string }
-  | { type: "callout"; title: string; text: string }
+  | { type: "callout"; title: string; text?: string; items?: string[] }
   | { type: "quote"; text: string; attribution?: string }
   | { type: "figure"; images: FigureImage[]; caption: string }
   | { type: "list"; items: string[]; ordered?: boolean }
@@ -383,7 +383,11 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "I searched for work on mystery boxes and BLV players directly and found none. Research on mystery boxes concerns marketing and the regulation of gambling-like mechanics, not accessibility. That gap is part of the case for this project. The closest evidence comes from three neighbouring areas.",
+            text: "I searched for work on mystery boxes and BLV individuals but found nothing substantial aside from Reddit threads on “blind boxes” and collecting. Research on mystery boxes seems to focus on marketing and the regulation of gambling-like mechanics, not really towards inclusivity. Some interesting projects I came across are not exactly what I am looking for, though I want to briefly include them to frame the kind of “solution” I am envisioning: [story boxes for visually impaired children](https://www.pathstoliteracy.org/easy-create-story-boxes) and [the Two Blind Brothers nonprofit](https://twoblindbrothers.com/pages/about-us).",
+          },
+          {
+            type: "p",
+            text: "The gap is part of the case for this project. The closest evidence comes from three neighbouring areas.",
           },
         ],
       },
@@ -394,6 +398,16 @@ export const chapters: Chapter[] = [
           {
             type: "p",
             text: "Bolesnikov, Kang and Girouard (2022) interviewed 15 BLV people about board and card games. They report themes about the properties and outcomes of inaccessible and accessible games. Their discussion of accessible games includes rulebooks that are available in accessible formats, such as Braille, and, for low-vision players, large text and high-contrast pieces. They also note that most BLV gaming accessibility research has focused on digital games, so tabletop and physical play remain under-studied. A mystery box is a physical, tabletop-adjacent object, which makes this literature the most useful starting point for the “properties of accessible play” that I want participants to refine.",
+          },
+          {
+            type: "callout",
+            title: "Potential prototype suggestions for participants",
+            items: [
+              "Bigger visual materials, such as the collector cards",
+              "QR code that describes the item in audio format",
+              "High contrast packaging and design",
+              "Inclusion of other sensory elements such as sound or texture",
+            ],
           },
         ],
       },

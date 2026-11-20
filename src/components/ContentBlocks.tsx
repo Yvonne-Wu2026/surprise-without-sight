@@ -25,6 +25,31 @@ function Points({ items }: { items: Point[] }) {
   );
 }
 
+/** Renders paragraph text, turning [label](https://url) into links. */
+function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+        if (!m) return part;
+        return (
+          <a
+            key={i}
+            href={m[2]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline decoration-cocoa/40 underline-offset-4 hover:decoration-cocoa"
+          >
+            {m[1]}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        );
+      })}
+    </>
+  );
+}
+
 export function ContentBlock({
   block,
   theme,
@@ -39,7 +64,9 @@ export function ContentBlock({
 
   switch (block.type) {
     case "p":
-      return <p className="text-[1.075rem] leading-[1.8]">{block.text}</p>;
+      return <p className="text-[1.075rem] leading-[1.8]">
+          <RichText text={block.text} />
+        </p>;
     case "callout":
       return (
         <aside
@@ -51,7 +78,16 @@ export function ContentBlock({
           <p className="font-display text-lg font-semibold" style={{ color: theme.ink }}>
             {block.title}
           </p>
-          <p className="mt-1.5 text-[1.075rem] leading-relaxed">{block.text}</p>
+          {block.text && (
+            <p className="mt-1.5 text-[1.075rem] leading-relaxed">{block.text}</p>
+          )}
+          {block.items && (
+            <ul className="mt-2 list-disc space-y-1.5 pl-6 text-[1.075rem] leading-relaxed">
+              {block.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          )}
         </aside>
       );
     case "quote":
