@@ -117,6 +117,14 @@ const R = {
     before:
       "Delgado, F., Yang, S., Madaio, M., & Yang, Q. (2021). Stakeholder participation in AI: Beyond “add diverse stakeholders and stir.” As cited in Odendaal & Zavala Barreda (2024); not read directly.",
   },
+  iowa: {
+    id: "iowa-dept-blind",
+    sort: "Iowa Department for the Blind",
+    before: "Iowa Department for the Blind. (n.d.). ",
+    italic: "Misconceptions about blindness",
+    after: ".",
+    url: "https://blind.iowa.gov/resources-and-publications/misconceptions-about-blindness",
+  },
   ixdf: {
     id: "ixdf",
     sort: "Interaction Design Foundation",
@@ -304,12 +312,11 @@ export const chapters: Chapter[] = [
     sections: [
       {
         id: "what",
-        heading: "What a mystery box sells",
-        paperHeading: null,
+        heading: "What is a mystery box?",
         blocks: [
           {
             type: "p",
-            text: "Mystery boxes and mystery bags sell one feeling: the thrill of not knowing what you will get. A mystery box is a collectible sold in sealed, opaque packaging so the buyer cannot tell which design is inside until it is opened. The pleasure is not only the surprise itself but the rituals around it: shaking the box, guessing the figure, reading the series checklist, spotting a rare or “secret” variant by colour, and the visible reveal that is shared with others.",
+            text: "Mystery boxes, more commonly referred to as “blind boxes,” have become their own distinct retail product category with massive demand and popularity. Mystery boxes often have themes; in the image shown below, there is a bakery theme for Miffy figures. Many buyers collect these figurines/toys, and each purchase is essentially a “blind” buy. The surprise is wrapped in opaque plastic packaging inside a decorated box, revealing the item only when torn open. These mystery boxes sell toys, but in my opinion, I think they are mainly selling a feeling. Mystery boxes sell a feeling of surprise, anticipation, or uncertainty. The fun part is not only the surprise itself, but also the entire experience leading up to the big reveal: seeing the lineup on the box packaging, guessing which item you got, and even shaking the box.",
           },
           {
             type: "figure",
@@ -334,12 +341,11 @@ export const chapters: Chapter[] = [
       },
       {
         id: "sight",
-        heading: "Rituals that assume sight",
-        paperHeading: null,
+        heading: "Rituals centered around sight",
         blocks: [
           {
             type: "p",
-            text: "Almost all of those rituals assume sight. The packaging art, the checklist poster, the colour-coded rarity and the unboxing moment are all visual. For blind and low-vision (BLV) young adults, a product built around “mystery” can become exclusion in disguise: the surprise is there, but the information needed to take part in the culture around it is not. A common fix, such as “have an app read out what is inside”, would solve access by destroying the mystery.",
+            text: "The mystery box experience has rituals heavily centered around sight; the appealing packaging, the information on the box, the collector’s note or card inside, and the unboxing moment are all visual. For blind and low vision (abbreviated as BLV) young adults, this experience built around visual anticipation can be exclusionary. Simply adding accessibility features doesn’t seem like the perfect solution for this retail category. Braille printing in the packaging or adding a QR code that reads out the contents could increase inclusivity, but I don’t think it captures the thrill of these unboxing experiences.",
           },
           { type: "callout", title: "Design question", text: designQuestion },
         ],
@@ -347,16 +353,15 @@ export const chapters: Chapter[] = [
       {
         id: "position",
         heading: "Why a participatory process",
-        paperHeading: null,
         blocks: [
           {
             type: "p",
-            text: "I do not assume I know the answer, and I am a sighted designer. That is why this project is organised as a participatory process rather than a product brief. The question itself, and what counts as “fun”, should be shaped by the people the experience is for.",
+            text: "There are many myths and misconceptions around blindness that I am still learning about. Although I have high myopia (if I take my glasses off, the Google doc I am typing on becomes white with lines of black blobs), I need to make clear that I do not assume to understand the experience of blind and visually impaired people. This project is organised as a participatory process, not a product brief or even a product proposal. The question itself, and what counts as “fun”, should be shaped by the people the experience is for. However, a bigger question that comes up is: Do current mystery boxes need “fixing?” The online research I have done seems to tell me that blind and visually impaired people enjoy mystery boxes and collecting items; just in different ways than sighted people. According to the Iowa Department for the Blind (n.d.), “Only approximately 18 percent of people who are legally blind are classified as being totally blind and the majority of blind people can still differentiate between light and dark.” Knowing this, is there even an opportunity to design a better experience for the audience in question? This is why I would leverage a participatory design process with direct stakeholder participation.",
           },
         ],
       },
     ],
-    references: [],
+    references: [R.iowa],
   },
   {
     id: "evidence",
@@ -375,7 +380,6 @@ export const chapters: Chapter[] = [
       {
         id: "gap",
         heading: "A gap in the research",
-        paperHeading: null,
         blocks: [
           {
             type: "p",
@@ -436,7 +440,6 @@ export const chapters: Chapter[] = [
       {
         id: "aspects",
         heading: "Six aspects of participatory design",
-        paperHeading: null,
         blocks: [
           {
             type: "p",
@@ -476,7 +479,6 @@ export const chapters: Chapter[] = [
       {
         id: "overview",
         heading: "The six stages",
-        paperHeading: null,
         blocks: [
           {
             type: "p",
@@ -651,7 +653,6 @@ export const chapters: Chapter[] = [
       {
         id: "weaknesses",
         heading: "Eight real weaknesses",
-        paperHeading: null,
         blocks: [
           {
             type: "p",
@@ -714,8 +715,7 @@ export const chapters: Chapter[] = [
     sections: [
       {
         id: "conclusion",
-        heading: "Conclusion",
-        paperHeading: null,
+        heading: "Final thoughts",
         blocks: [
           {
             type: "p",
@@ -726,7 +726,6 @@ export const chapters: Chapter[] = [
       {
         id: "capsule",
         heading: "A question to take with you",
-        paperHeading: null,
         blocks: [
           {
             type: "p",

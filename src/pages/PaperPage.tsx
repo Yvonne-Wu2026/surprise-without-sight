@@ -95,6 +95,7 @@ export function PaperPage() {
                   Box {c.number} · {c.title}
                 </p>
                 {c.sections.map((s) => {
+                  if (s.blocks.every((b) => b.only === "chapter")) return null;
                   const heading = s.paperHeading === undefined ? s.heading : s.paperHeading;
                   return (
                     <div key={s.id} className="mt-6">
