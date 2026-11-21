@@ -383,11 +383,11 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "I searched for work on mystery boxes and BLV individuals but found nothing substantial aside from Reddit threads on “blind boxes” and collecting. Research on mystery boxes seems to focus on marketing and the regulation of gambling-like mechanics, not really towards inclusivity. Some interesting projects I came across are not exactly what I am looking for, though I want to briefly include them to frame the kind of “solution” I am envisioning: [story boxes for visually impaired children](https://www.pathstoliteracy.org/easy-create-story-boxes) and [the Two Blind Brothers nonprofit](https://twoblindbrothers.com/pages/about-us).",
+            text: "I searched for work on mystery boxes and BLV individuals but found nothing substantial aside from Reddit threads on “blind boxes” and collecting. Research on mystery boxes seems to focus on marketing and the regulation of gambling-like mechanics, not really towards inclusivity. There is an interesting post I came across that isn’t exactly like mystery boxes, though I want to mention it because they have some applicable elements. Jaime Brown wrote a blog about creating story boxes for students with visual impairments as a way to enhance the storytelling experience through multisensory methods. I like the idea of including different sensory elements in storytelling; a stuffed animal, adding movement, using story support apps for sounds, and even taste if relevant. I also love that storytelling is framed as an interactive experience that involves both teachers and students. You can read more about these story boxes by clicking this link: [Easy to Create Story Boxes](https://www.pathstoliteracy.org/easy-create-story-boxes/).",
           },
           {
             type: "p",
-            text: "The gap is part of the case for this project. The closest evidence comes from three neighbouring areas.",
+            text: "In the next three sections, I explore “related” works. Related is used loosely as I couldn’t find research or case studies done on mystery boxes for BLV individuals, specifically young adults.",
           },
         ],
       },
