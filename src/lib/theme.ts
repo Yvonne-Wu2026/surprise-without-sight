@@ -7,7 +7,7 @@ export type BoxTheme = {
   ribbon: string;
   ribbonShade: string;
   soft: string;
-  /** Accessible accent text colour on ivory/white backgrounds. */
+  /** Accessible accent text color on ivory/white backgrounds. */
   ink: string;
 };
 

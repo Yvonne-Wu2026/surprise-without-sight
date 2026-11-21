@@ -44,7 +44,7 @@ export type Section = {
 
 export type Reference = {
   id: string;
-  /** Sort key: the first author's surname or organisation. */
+  /** Sort key: the first author's surname or organization. */
   sort: string;
   before: string;
   /** The italicised part (book, proceedings or journal title). */
@@ -219,7 +219,7 @@ export const stages: {
     id: "stage-1",
     name: "Preparation and framing",
     theme: "blush",
-    activity: "Partner with BLV organisations, hire co-researchers, agree on access needs and pay",
+    activity: "Partner with BLV organizations, hire co-researchers, agree on access needs and pay",
     participants: "2 co-researchers, partners",
     output: "Shared research question, accessible consent",
   },
@@ -331,7 +331,7 @@ export const chapters: Chapter[] = [
                 src: img("blind-box-series.webp"),
                 width: 823,
                 height: 823,
-                alt: "Seven plush keychain figures from the same Miffy Bakery Series lined up on a pink background: white and brown bunnies and a brown bear, each in a different apron or hat and holding a different bakery item such as a donut, a latte, a cup, a bun, a toast slice or a baguette. The differences between them are mostly colour and small details.",
+                alt: "Seven plush keychain figures from the same Miffy Bakery Series lined up on a pink background: white and brown bunnies and a brown bear, each in a different apron or hat and holding a different bakery item such as a donut, a latte, a cup, a bun, a toast slice or a baguette. The differences between them are mostly color and small details.",
               },
             ],
             caption:
@@ -356,7 +356,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "There are many myths and misconceptions around blindness that I am still learning about. Although I have high myopia (if I take my glasses off, the Google doc I am typing on becomes white with lines of black blobs), I need to make clear that I do not assume to understand the experience of blind and visually impaired people. This project is organised as a participatory process, not a product brief or even a product proposal. The question itself, and what counts as “fun”, should be shaped by the people the experience is for. However, a bigger question that comes up is: Do current mystery boxes need “fixing?” The online research I have done seems to tell me that blind and visually impaired people enjoy mystery boxes and collecting items; just in different ways than sighted people. According to the Iowa Department for the Blind (n.d.), “Only approximately 18 percent of people who are legally blind are classified as being totally blind and the majority of blind people can still differentiate between light and dark.” Knowing this, is there even an opportunity to design a better experience for the audience in question? This is why I would leverage a participatory design process with direct stakeholder participation.",
+            text: "There are many myths and misconceptions around blindness that I am still learning about. Although I have high myopia (if I take my glasses off, the Google doc I am typing on becomes white with lines of black blobs), I need to make clear that I do not assume to understand the experience of blind and visually impaired people. This project is organized as a participatory process, not a product brief or even a product proposal. The question itself, and what counts as “fun”, should be shaped by the people the experience is for. However, a bigger question that comes up is: Do current mystery boxes need “fixing?” The online research I have done seems to tell me that blind and visually impaired people enjoy mystery boxes and collecting items; just in different ways than sighted people. According to the Iowa Department for the Blind (n.d.), “Only approximately 18 percent of people who are legally blind are classified as being totally blind and the majority of blind people can still differentiate between light and dark.” Knowing this, is there even an opportunity to design a better experience for the audience in question? This is why I would leverage a participatory design process with direct stakeholder participation.",
           },
         ],
       },
@@ -371,7 +371,7 @@ export const chapters: Chapter[] = [
     paperNumber: "2",
     paperHeading: "What related work tells us",
     subtitle:
-      "No one has studied mystery boxes and BLV players directly, so the clues come from three neighbouring areas.",
+      "No one has studied mystery boxes and BLV players directly, so the clues come from three neighboring areas.",
     theme: "lavender",
     emblem: "bulb",
     preview:
@@ -449,14 +449,10 @@ export const chapters: Chapter[] = [
             type: "p",
             text: "Odendaal and Zavala Barreda (2024) ran four online workshops in which different cohorts of 5 to 15 participants each continued the board-game design where the previous cohort stopped. Across the project, 39 people took part. The authors argue that this “design relay” produced polyvocality, because each group had to engage with, question and build on earlier contributions. They are also candid about two limitations that I treat as design constraints for my own protocol: facilitators ended up with an overbearing editorial role that kept power with the designers, and participants were not involved in the reflective practice itself.",
           },
-          {
-            type: "p",
-            text: "Sanders and Stappers (2008), whom Odendaal and Zavala Barreda cite, distinguish co-design by its emphasis on collaboration from before the design decisions are made through to prototyping. That is the standard I hold this protocol to. The aim is that participants shape the question, not only the answers.",
-          },
         ],
       },
     ],
-    references: [R.alzalabny, R.bolesnikov, R.odendaal, R.sanders],
+    references: [R.alzalabny, R.bolesnikov, R.odendaal],
   },
   {
     id: "principles",
@@ -535,7 +531,7 @@ export const chapters: Chapter[] = [
             items: [
               {
                 lead: "Partners and co-researchers.",
-                text: "Contact local organisations that serve BLV people and recruit two BLV young adults as paid co-researchers before any design work. They review the research question, consent materials and session plans.",
+                text: "Contact local organizations that serve BLV people and recruit two BLV young adults as paid co-researchers before any design work. They review the research question, consent materials and session plans.",
               },
               {
                 lead: "Access first.",
@@ -641,7 +637,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "If a concept survives, I would approach a small independent maker or brand to produce a limited pilot batch. Participants would be named co-designers, and new BLV buyers would try the boxes in realistic conditions. The pilot must not add mechanics that intensify gambling-like behaviour such as pushing repeat purchases; participants should help set that line.",
+            text: "If a concept survives, I would approach a small independent maker or brand to produce a limited pilot batch. Participants would be named co-designers, and new BLV buyers would try the boxes in realistic conditions. The pilot must not add mechanics that intensify gambling-like behavior such as pushing repeat purchases; participants should help set that line.",
           },
         ],
       },
@@ -701,7 +697,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "A small group cannot represent a diverse community.",
-                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. Eight to ten people cannot speak for all of them, and recruiting through organisations tends to reach people who are already connected and comfortable with research. This is relevant for an internationalisation course too: attitudes to mystery boxes, gambling and disability differ across countries and legal contexts, and a protocol rooted in one place may not travel.",
+                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. Eight to ten people cannot speak for all of them, and recruiting through organizations tends to reach people who are already connected and comfortable with research. This is relevant for an internationalisation course too: attitudes to mystery boxes, gambling and disability differ across countries and legal contexts, and a protocol rooted in one place may not travel.",
               },
               {
                 lead: "Tokenism risk.",
