@@ -75,7 +75,7 @@ export type Chapter = {
 const img = (file: string) => `${import.meta.env.BASE_URL}images/${file}`;
 
 export const paperMeta = {
-  title: "Surprise Without Sight",
+  title: "Joy of the Unknown",
   subtitle:
     "A co-design protocol for making mystery boxes an inclusive, fun experience for blind and low-vision young adults",
   kind: "Participatory Research and Design Project",
@@ -175,42 +175,42 @@ export const principles: { id: string; name: string; theme: ThemeKey; definition
     name: "Inclusion",
     theme: "blush",
     definition:
-      "BLV young adults (about 18 to 30) with a range of vision, including collectors and people who have never opened a mystery box. Materials are provided in each person's preferred format.",
+      "12 BLV young adults (about 18 to 30): 2 blind and 10 with varying levels of low vision, including collectors and people who have never opened a mystery box. An accessibility needs assessment sets each person's preferred formats and accommodations.",
   },
   {
     id: "collaboration",
     name: "Collaboration",
     theme: "lavender",
     definition:
-      "Two paid BLV co-researchers help plan sessions, review synthesis, and co-facilitate from the start.",
+      "Participants build concepts on their own first, then work in pairs to combine ideas into a shared prototype and give feedback on another pair's work.",
   },
   {
     id: "empowerment",
     name: "Empowerment",
     theme: "mint",
     definition:
-      "Participants define success criteria and hold a veto over concepts. They are credited and paid as co-designers.",
+      "Participants decide which features to keep, change or remove, and confirm that their contributions are represented accurately. They are credited and paid as co-designers.",
   },
   {
     id: "iteration",
     name: "Iteration",
     theme: "butter",
     definition:
-      "A relay of workshops and test cycles in which each round starts from the previous round's decisions.",
+      "Prototypes are tested, feedback is synthesized into themes, and participants choose what goes into the next iteration.",
   },
   {
     id: "context",
     name: "Contextual understanding",
     theme: "peach",
     definition:
-      "Sessions happen around real mystery boxes, real shops and real unboxing habits, not abstract discussion.",
+      "Sessions start with real mystery boxes and participants' own unboxing habits, not abstract discussion.",
   },
   {
     id: "advocacy",
     name: "Audience advocacy",
     theme: "sky",
     definition:
-      "The advisory group can speak to makers and retailers on the project's behalf and decide what is shared publicly.",
+      "The final concept and a record of which recommendations were used, changed or left out are shared with participants in their chosen formats, so their priorities stay visible.",
   },
 ];
 
@@ -680,65 +680,49 @@ export const chapters: Chapter[] = [
   {
     id: "limitations",
     number: "06",
-    title: "The Honest Box",
+    title: "The Honesty Box",
     label: "Criticisms and limitations",
     paperNumber: "5",
     paperHeading: "Criticisms and limitations",
-    subtitle: "What this approach cannot do, named plainly.",
+    subtitle: "Discussing the limitations",
     theme: "sky",
     emblem: "eye",
     preview:
-      "A sighted facilitator, a small sample, tokenism, a gambling-like product, an unresolved tension, cost, thin evidence, and an untested plan.",
+      "A sighted facilitator, a small sample, the morality of mystery boxes, thin evidence, and an untested plan.",
     sections: [
       {
         id: "weaknesses",
-        heading: "Eight real weaknesses",
+        heading: "Critiques and weaknesses",
         blocks: [
-          {
-            type: "p",
-            text: "This approach has real weaknesses. I list them plainly because the assignment asks for criticism and because naming them is part of doing participatory work honestly.",
-          },
           {
             type: "points",
             items: [
               {
-                lead: "I am a sighted facilitator interpreting a lived experience I do not have.",
-                text: "Even with co-researchers, my framing, my choice of prompts and my synthesis shape the outcome. Odendaal and Zavala Barreda (2024) found the same: designer-facilitators end up in an editorial role that partly defeats the aim of dissolving power relations. Paying co-researchers and letting participants review synthesis reduces this but does not remove it.",
+                lead: "I am proposing a protocol for BLV participants as a sighted person.",
+                text: "Even with participants co-designing, my framing and choice of prompts shape the outcome. Paying participants and letting them review iterations reduces bias but does not remove it.",
               },
               {
-                lead: "A small group cannot represent a diverse community.",
-                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. Eight to ten people cannot speak for all of them, and recruiting through organizations tends to reach people who are already connected and comfortable with research. This is relevant for an internationalisation course too: attitudes to mystery boxes, gambling and disability differ across countries and legal contexts, and a protocol rooted in one place may not travel.",
+                lead: "A small sample size can’t represent a diverse community.",
+                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. 12 participants can’t speak for all of them, and recruiting through organizations tends to reach people who are already connected and comfortable with research. Additionally, attitudes to mystery boxes, gambling and disability differ across countries and legal contexts.",
               },
               {
-                lead: "Tokenism risk.",
-                text: "A veto and a paid panel help, but if the pilot partner is a company with its own priorities, participants may still be consulted without real decision power. Participation can end up as “a veneer” over existing inequalities, a critique that Odendaal and Zavala Barreda (2024) attribute to Delgado et al. (2021).",
-              },
-              {
-                lead: "The product itself may be the problem.",
-                text: "Mystery boxes depend on scarcity and random reward. Making them accessible could also make a gambling-like product more appealing to a group that is already marginalised. The co-design process may conclude that some mechanics should not exist, and a commercial partner may not accept that outcome.",
-              },
-              {
-                lead: "The surprise-versus-agency tension may not resolve.",
-                text: "It is possible that every way of giving a BLV player information weakens the mystery. A good result might be honest trade-offs, not a single elegant solution.",
-              },
-              {
-                lead: "Cost, time and fatigue.",
-                text: "Tactile kits, accessible venues, travel, pay and multiple rounds are expensive, and repeated sessions can tire participants. A relay with different cohorts also loses continuity, which Odendaal and Zavala Barreda (2024) managed only by restructuring each workshop around the last one's outcome and which placed a heavy adaptation burden on facilitators.",
+                lead: "Morality of mystery boxes.",
+                text: "Mystery boxes depend on scarcity and random reward. Making them accessible could also make a gambling-like product more appealing to a group that is already marginalized.",
               },
               {
                 lead: "Evidence is thin.",
-                text: "There is little published research on mystery boxes and accessibility, so I lean on adjacent work in tabletop games and tactile co-design. Some findings may not transfer to a retail product bought on impulse.",
+                text: "There is little published research on mystery boxes and accessibility, so I included adjacent work in tabletop games and tactile co-design. Findings are not entirely transferable to the mystery box market.",
               },
               {
-                lead: "This is untested.",
-                text: "The protocol is a plan. I have not run it, so every duration and group size is an assumption.",
+                lead: "Lastly, this is untested.",
+                text: "The protocol is a plan. Group size is an assumption, and durations for each stage are not added at this point.",
               },
             ],
           },
         ],
       },
     ],
-    references: [R.odendaal, R.delgado],
+    references: [],
   },
   {
     id: "conclusion",
@@ -759,7 +743,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Mystery boxes make a good test case for participatory design because their core appeal, surprise, seems to conflict with accessibility. Working with BLV young adults as co-researchers and co-designers is the most reliable way to find out whether that conflict is real, and which compromises people actually value. The protocol combines a six-stage structure with tactile, adapted workshop methods and a relay of cohorts, and it builds in the participant-led reflection that earlier work identified as missing. Its limits are real: a sighted designer, a small sample, commercial pressure and unproven methods. If it works, the result is not only a better product but a clearer view of how “fun” is defined, and by whom.",
+            text: "Mystery boxes make a good test case for participatory design because their core appeal, surprise, seems to conflict with accessibility. Working with BLV young adults as co-designers is the most reliable way to find out whether that conflict is real, and which compromises people actually value. The protocol follows six stages with 12 participants: an accessibility needs assessment, exploring real mystery boxes together, building concepts with a tactile toolkit and then in pairs, testing each other’s prototypes, deciding which features to keep, change or remove, and reviewing the final concept to confirm their contributions are represented accurately. Its limits are real: a sighted facilitator, a small sample, the morality of mystery boxes, thin evidence and an untested plan. If it works, the result is not only a better product but a clearer view of how “fun” is defined, and by whom.",
           },
         ],
       },

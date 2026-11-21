@@ -1,4 +1,4 @@
-# Surprise Without Sight
+# Joy of the Unknown
 
 HF720 participatory research and design assignment: a co-design protocol for making
 mystery boxes inclusive for blind and low-vision young adults.
