@@ -111,6 +111,14 @@ const R = {
     after: ". ACM.",
     url: "https://doi.org/10.1145/3490149.3501327",
   },
+  brown: {
+    id: "brown-story-boxes",
+    sort: "Brown",
+    before: "Brown, J. (n.d.). ",
+    italic: "Easy to create story boxes",
+    after: ". Paths to Literacy.",
+    url: "https://www.pathstoliteracy.org/easy-create-story-boxes/",
+  },
   delgado: {
     id: "delgado-2021",
     sort: "Delgado",
@@ -345,7 +353,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "The mystery box experience has rituals heavily centered around sight; the appealing packaging, the information on the box, the collector’s note or card inside, and the unboxing moment are all visual. For blind and low vision (abbreviated as BLV) young adults, this experience built around visual anticipation can be exclusionary. Simply adding accessibility features doesn’t seem like the perfect solution for this retail category. Braille printing in the packaging or adding a QR code that reads out the contents could increase inclusivity, but I don’t think it captures the thrill of these unboxing experiences.",
+            text: "The mystery box experience has rituals heavily centered around sight; the appealing packaging, the information on the box, the collector’s note or card inside, and the unboxing moment are all visual. For blind and low-vision (abbreviated as BLV) young adults, this experience built around visual anticipation can be exclusionary. Simply adding accessibility features doesn’t seem like the perfect solution for this retail category. Braille printing in the packaging or adding a QR code that reads out the contents could increase inclusivity, but I don’t think it captures the thrill of these unboxing experiences.",
           },
           { type: "callout", title: "Design question", text: designQuestion },
         ],
@@ -405,7 +413,7 @@ export const chapters: Chapter[] = [
             items: [
               "Bigger visual materials, such as the collector cards",
               "QR code that describes the item in audio format",
-              "High contrast packaging and design",
+              "High-contrast packaging and design",
               "Inclusion of other sensory elements such as sound or texture",
             ],
           },
@@ -452,7 +460,7 @@ export const chapters: Chapter[] = [
         ],
       },
     ],
-    references: [R.alzalabny, R.bolesnikov, R.odendaal],
+    references: [R.alzalabny, R.bolesnikov, R.brown, R.odendaal],
   },
   {
     id: "principles",
@@ -512,11 +520,11 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "I use the six stages from the Parallel (n.d.) participatory design template provided for this assignment, because it keeps preparation and long-term governance in view, not only the workshops. The protocol is a proposal: no sessions have been run, and every number below is a planning assumption to be revised with the co-researchers.",
+            text: "Drawing inspiration from the Parallel (n.d.) participatory design template, I am proposing a 6-stage participatory design protocol, keeping preparation and long-term governance in view.",
           },
           {
             type: "p",
-            text: "Unwrap each stage to see its main activity, who takes part, and what it produces.",
+            text: "Tap each box to read a preview about each stage.",
             only: "chapter",
           },
           { type: "interactive", kind: "gifts" },
