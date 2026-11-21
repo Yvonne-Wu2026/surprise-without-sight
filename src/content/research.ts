@@ -227,68 +227,73 @@ export const stages: {
     id: "stage-1",
     name: "Preparation and framing",
     theme: "blush",
-    activity: "Partner with BLV organizations, hire co-researchers, agree on access needs and pay",
-    participants: "2 co-researchers, partners",
-    output: "Shared research question, accessible consent",
+    activity: "Accessibility needs assessment; prepare accessible materials and consent",
+    participants: "12 participants (2 blind, 10 low vision)",
+    output: "An inclusive environment with equitable opportunities to contribute",
   },
   {
     id: "stage-2",
     name: "Discovery and contextual inquiry",
     theme: "lavender",
-    activity: "Go-along unboxing sessions and interviews",
-    participants: "8 to 10 BLV young adults",
-    output: "Rituals, workarounds, pain points, “what surprise means”",
+    activity: "Explore mystery boxes and packaging, then discuss",
+    participants: "12 participants",
+    output: "Emotional expectations, access needs, interpretations of surprise",
   },
   {
     id: "stage-3",
     name: "Co-ideation and co-design",
     theme: "mint",
-    activity: "Two-cohort tactile design relay",
-    participants: "2 cohorts of 4 to 6",
-    output: "Concept directions and success criteria",
+    activity: "Individual tactile concepts, then paired co-design",
+    participants: "12 participants, in pairs",
+    output: "Concepts built around access and emotional engagement",
   },
   {
     id: "stage-4",
-    name: "Prototyping and feedback cycles",
+    name: "Prototyping and feedback",
     theme: "butter",
-    activity: "Build and test 2 to 3 concepts over 3 rounds",
-    participants: "Returning participants",
-    output: "Refined or vetoed concepts",
+    activity: "Pairs explore and discuss each other’s prototypes",
+    participants: "12 participants, in pairs",
+    output: "Feedback on accessibility and surprise",
   },
   {
     id: "stage-5",
     name: "Implementation and refinement",
     theme: "peach",
-    activity: "Small pilot with a maker or brand partner",
-    participants: "Participants plus new BLV buyers",
-    output: "Pilot results and revised guidelines",
+    activity: "Synthesize feedback; participants decide what to keep, change, or remove",
+    participants: "Researchers and 12 participants",
+    output: "Design changes chosen by participants",
   },
   {
     id: "stage-6",
     name: "Sustain and governance",
     theme: "sky",
-    activity: "Advisory panel, open guidelines, feedback channel",
-    participants: "Advisory panel",
-    output: "Ongoing review and shared credit",
+    activity: "Share the final concept and document design decisions",
+    participants: "12 participants",
+    output: "Transparent record of decisions; participants confirm their input",
   },
 ];
 
-/** Stage 4: the starting concept families (shake-to-reveal). */
-export const conceptFamilies: (Point & { id: string })[] = [
+/** Stage 4: the feedback questions pairs ask about each other's prototypes (shake-to-reveal). */
+export const feedbackQuestions: (Point & { id: string })[] = [
   {
-    id: "tactile",
-    lead: "Tactile rarity cues",
-    text: "Rarity or series is encoded in textures, shapes or weights on the packaging, so players can tell a box type without sight while the figure inside stays hidden.",
+    id: "surprising",
+    lead: "Does it feel surprising?",
+    text: "Does the box build anticipation and keep the item a secret until the moment it is opened?",
   },
   {
-    id: "sound-scent",
-    lead: "Sound and scent reveals",
-    text: "The reveal becomes an audio or scent moment, such as a series theme or a distinctive scent, so surprise is multisensory and shareable at a table.",
+    id: "enjoyable",
+    lead: "Is it enjoyable?",
+    text: "Is opening it fun, and is it a moment you would want to share with friends?",
   },
   {
-    id: "labelling",
-    lead: "Equal-information labelling",
-    text: "Odds, series size and brand details appear in accessible formats (Braille, large print, a QR code with audio) so BLV players get the full picture of what they are buying without needing help.",
+    id: "intuitive",
+    lead: "Is it intuitive?",
+    text: "Can you tell how to open it and what to do next without being told?",
+  },
+  {
+    id: "independent",
+    lead: "Is it independently accessible?",
+    text: "Can you enjoy the whole experience, from picking a box to the big reveal, without sighted help?",
   },
 ];
 
@@ -512,7 +517,7 @@ export const chapters: Chapter[] = [
     theme: "butter",
     emblem: "spark",
     preview:
-      "An overview of all six stages, then preparation and framing, go-along unboxing sessions, and a two-cohort tactile design relay.",
+      "An overview of all six stages, then preparation and framing, exploring real mystery boxes together, and tactile co-design in pairs.",
     sections: [
       {
         id: "overview",
@@ -535,21 +540,17 @@ export const chapters: Chapter[] = [
         heading: "Stage 1. Preparation and framing",
         blocks: [
           {
-            type: "points",
-            items: [
-              {
-                lead: "Partners and co-researchers.",
-                text: "Contact local organizations that serve BLV people and recruit two BLV young adults as paid co-researchers before any design work. They review the research question, consent materials and session plans.",
-              },
-              {
-                lead: "Access first.",
-                text: "Ask every participant in advance about preferred formats (screen-reader-friendly documents, large print, Braille, audio), travel needs, guide animals, sighted assistance and breaks. Hold sessions in step-free, quiet, well-lit spaces with remote options, and pay for participation and travel.",
-              },
-              {
-                lead: "Consent.",
-                text: "Offer consent in the participant's chosen format, read aloud if wanted, and make clear that they can stop at any time and that nothing they say about gambling-like mechanics or their finances is required.",
-              },
-            ],
+            type: "p",
+            text: "12 participants (2 blind, 10 with varying levels of low vision) participate in an accessibility needs assessment to identify preferred communication formats, assistive technologies, and accommodations.",
+          },
+          {
+            type: "p",
+            text: "Prepare tactile materials, audio descriptions, large-print and Braille labels, and accessible consent forms. Explain that participants will help shape the mystery box concept rather than simply test an existing design. Ensure that there is adjustable lighting throughout the entire protocol.",
+          },
+          {
+            type: "callout",
+            title: "Goal",
+            text: "Establish an inclusive environment with equitable opportunities to contribute.",
           },
         ],
       },
@@ -558,21 +559,23 @@ export const chapters: Chapter[] = [
         heading: "Stage 2. Discovery and contextual inquiry",
         blocks: [
           {
-            type: "points",
+            type: "p",
+            text: "Allow participants to explore different mystery boxes and packaging. Discuss what makes opening boxes exciting, fun, confusing, frustrating and everything in between. Again, provide adjustable lighting and high-contrast/large-print materials throughout the workshop.",
+          },
+          {
+            type: "callout",
+            title: "Sample questions",
             items: [
-              {
-                lead: "Go-along unboxing (60 to 90 minutes, one to one).",
-                text: "I supply a few mystery boxes from different brands. Participants open them in whatever way they normally would, and I observe and ask them to think aloud. I watch for the use of weight, shake, sound, smell and texture; remote sighted help (such as video-call assistance); and what is lost or gained.",
-              },
-              {
-                lead: "Open interview.",
-                text: "What does surprise mean to you? When has a mystery purchase felt good, and when has it felt unfair or excluding? What would “equal” feel like?",
-              },
-              {
-                lead: "Participants as experts.",
-                text: "Their existing workarounds are treated as design knowledge, not as deficits. Co-researchers join the synthesis, and participants review a plain-language summary of what I heard before it is used (see the limitations on this in section 5).",
-              },
+              "What makes opening a mystery box exciting?",
+              "How do you know what to do when opening unfamiliar packaging?",
+              "What do you like and not like about the mystery boxes you have interacted with so far?",
+              "What information would you want before opening the box, and what should remain a surprise?",
             ],
+          },
+          {
+            type: "callout",
+            title: "Goal",
+            text: "Identify emotional expectations, accessibility needs, and different interpretations of surprise.",
           },
         ],
       },
@@ -582,33 +585,21 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "I adapt the design relay of Odendaal and Zavala Barreda (2024) in two cohorts. Cohort A defines what makes a good mystery and the criteria any concept must meet. Cohort B takes those criteria and the unresolved questions and builds concepts, then hands their work back for Stage 4. Each session follows the accessibility lessons from Alzalabny et al. (2025).",
+            text: "Participants independently create a mystery box concept using a tactile toolkit containing small boxes, textured surfaces, magnetic pieces, different closures, sound-making elements, etc. Then participants will do collaborative co-design, working together in pairs to combine ideas into a shared prototype. Encourage discussion about how the box builds anticipation, communicates information, and preserves surprise.",
           },
           {
-            type: "points",
-            items: [
-              {
-                lead: "Tactile kit.",
-                text: "Clay, textured papers and fabrics, bump dots, magnets, small bells, scented swatches and capsules of different weights. No material depends on seeing it.",
-              },
-              {
-                lead: "Individual then merged.",
-                text: "Each participant first builds a concept alone, then the group merges the strongest ideas into one shared prototype.",
-              },
-              {
-                lead: "Describe aloud.",
-                text: "Everyone narrates what they place and where. Sighted helpers act only as hands when asked, never as designers.",
-              },
-              {
-                lead: "Provocation.",
-                text: "Following the critical-play approach in the class reading, one activity is a speculative prompt (“a mystery box shop in ten years where everyone plays on equal terms”) to move discussion past the fixes people already know.",
-              },
-            ],
+            type: "p",
+            text: "Facilitate without privileging visual design ideas. Rather than relying on visual sketches, participants can physically arrange materials, describe their concepts verbally, or construct simple models.",
+          },
+          {
+            type: "callout",
+            title: "Goal",
+            text: "Generate concepts that incorporate accessibility and emotional engagement from the beginning.",
           },
         ],
       },
     ],
-    references: [R.parallel, R.odendaal, R.alzalabny],
+    references: [R.parallel],
   },
   {
     id: "prototype",
@@ -618,24 +609,30 @@ export const chapters: Chapter[] = [
     paperNumber: "4",
     paperHeading: "The protocol, stage by stage",
     subtitle:
-      "Testing concepts, piloting what survives, and keeping participants in charge after the project ends.",
+      "Testing prototypes together, refining them around participant priorities, and closing the loop transparently.",
     theme: "peach",
     emblem: "heart",
     preview:
-      "Three starting concepts to test (and possibly veto), a small pilot with a maker, and an advisory panel with open guidelines.",
+      "Pairs test each other’s prototypes, participants decide what changes next, and the final concept goes back to them for review.",
     sections: [
       {
         id: "stage-4",
-        heading: "Stage 4. Prototyping and feedback cycles",
+        heading: "Stage 4. Prototyping and feedback",
         blocks: [
           {
             type: "p",
-            text: "I expect to test two or three concept families over three rounds. These are starting hypotheses, not the answer; participants may reject all of them:",
+            text: "Each pair will have created a low-fidelity mystery box prototype by this stage. Participants explore another group’s prototype and discuss its emotional and sensory qualities. Ask whether the experience feels surprising, enjoyable, intuitive, and independently accessible.",
+          },
+          {
+            type: "p",
+            text: "Shake the box to reveal a feedback question pairs can ask about each other’s prototypes.",
+            only: "chapter",
           },
           { type: "interactive", kind: "shake" },
           {
-            type: "p",
-            text: "Each round, participants test low-fidelity prototypes, rate them against the criteria they wrote in Stage 3 (for example: “still feels like a surprise”, “I can do it without help”, “I can share it with friends”), and can veto a concept outright. The next round begins from what survives.",
+            type: "callout",
+            title: "Goal",
+            text: "Evaluate whether the design supports both accessibility and the emotional experience of surprise.",
           },
         ],
       },
@@ -645,7 +642,16 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "If a concept survives, I would approach a small independent maker or brand to produce a limited pilot batch. Participants would be named co-designers, and new BLV buyers would try the boxes in realistic conditions. The pilot must not add mechanics that intensify gambling-like behavior such as pushing repeat purchases; participants should help set that line.",
+            text: "Researchers synthesize workshop feedback into themes such as sensory accessibility, emotional engagement, and packaging usability.",
+          },
+          {
+            type: "p",
+            text: "Participants share what they learned and identify which design features they would retain, change, or remove. They will also review the proposed design changes and decide which features should be incorporated in the next iterations.",
+          },
+          {
+            type: "callout",
+            title: "Goal",
+            text: "Ensure design iterations reflect participant priorities rather than researcher assumptions.",
           },
         ],
       },
@@ -654,26 +660,22 @@ export const chapters: Chapter[] = [
         heading: "Stage 6. Sustain and governance",
         blocks: [
           {
-            type: "points",
+            type: "list",
             items: [
-              {
-                lead: "Advisory panel.",
-                text: "Participants who want to continue stay on as a paid advisory group with a say in how results are shared.",
-              },
-              {
-                lead: "Participant-led reflection.",
-                text: "After each stage, participants and co-researchers join a debrief about what worked and what did not. This directly addresses a limitation that Odendaal and Zavala Barreda (2024) name in their own project.",
-              },
-              {
-                lead: "Open guidelines.",
-                text: "Publish a short, accessible set of mystery box design guidelines, free to reuse, with participants credited as they choose.",
-              },
+              "Share the final proposed concept and a summary of design decisions with participants in their chosen formats.",
+              "Invite participants to confirm whether their contributions have been represented accurately and whether any concerns remain.",
+              "Document which recommendations were incorporated, modified, or omitted, along with the reasoning.",
             ],
+          },
+          {
+            type: "callout",
+            title: "Goal",
+            text: "Maintain transparency, acknowledge participants’ contributions, and preserve their agency over design decisions.",
           },
         ],
       },
     ],
-    references: [R.odendaal],
+    references: [],
   },
   {
     id: "limitations",

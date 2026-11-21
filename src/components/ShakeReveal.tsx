@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useAnimationControls } from "motion/react";
 import { Eye, RotateCcw, Shuffle } from "lucide-react";
-import { conceptFamilies } from "@/content/research";
+import { feedbackQuestions } from "@/content/research";
 import { useStore } from "@/lib/store";
 import { themes } from "@/lib/theme";
 import { MysteryBox } from "./MysteryBox";
@@ -9,7 +9,7 @@ import { SparkleBurst } from "./Decor";
 
 const NEEDED = 4;
 
-/** Stage 4's starting concept families, revealed one at a time by shaking a box. */
+/** Stage 4's feedback questions, revealed one at a time by shaking a box. */
 export function ShakeReveal() {
   const { motionOff, readingMode, announce, chime } = useStore();
   const [shakes, setShakes] = useState(0);
@@ -19,17 +19,17 @@ export function ShakeReveal() {
   const lastDir = useRef(0);
   const count = useRef(0);
   const wiggle = useAnimationControls();
-  const q = conceptFamilies[qi];
-  const label = `Starting concept ${qi + 1} of ${conceptFamilies.length}`;
+  const q = feedbackQuestions[qi];
+  const label = `Feedback question ${qi + 1} of ${feedbackQuestions.length}`;
 
   if (readingMode) {
     return (
       <div className="my-6 rounded-2xl border border-cocoa/15 bg-white p-5">
-        <p className="font-display text-lg font-semibold">Three starting concepts</p>
+        <p className="font-display text-lg font-semibold">Feedback questions for each prototype</p>
         <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed">
-          {conceptFamilies.map((c) => (
+          {feedbackQuestions.map((c) => (
             <li key={c.id}>
-              <strong>{c.lead}.</strong> {c.text}
+              <strong>{c.lead}</strong> {c.text}
             </li>
           ))}
         </ul>
@@ -41,7 +41,7 @@ export function ShakeReveal() {
     setOpen(true);
     setBurst((b) => b + 1);
     chime("sparkle");
-    announce(`The box opens. ${label}: ${q.lead}. ${q.text}`);
+    announce(`The box opens. ${label}: ${q.lead} ${q.text}`);
   };
 
   const addShake = () => {
@@ -147,12 +147,11 @@ export function ShakeReveal() {
                 exit={{ opacity: 0 }}
               >
                 <p className="font-display text-2xl font-semibold">
-                  A concept is rattling around in here.
+                  A question is rattling around in here.
                 </p>
                 <p className="mt-2 leading-relaxed text-cocoa-soft">
                   Shake the box {NEEDED} times to loosen the lid, or skip straight to the reveal.
-                  These are starting hypotheses, not the answer; participants may reject all of
-                  them.
+                  Pairs ask these questions while exploring another group’s prototype.
                 </p>
               </motion.div>
             )}
@@ -164,12 +163,12 @@ export function ShakeReveal() {
                 onClick={reveal}
                 className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-cocoa px-5 font-bold text-ivory transition hover:bg-[#4a3838] active:scale-95"
               >
-                <Eye className="size-4" aria-hidden="true" /> Reveal Concept
+                <Eye className="size-4" aria-hidden="true" /> Reveal Question
               </button>
             ) : (
               <button
                 type="button"
-                onClick={() => close((qi + 1) % conceptFamilies.length)}
+                onClick={() => close((qi + 1) % feedbackQuestions.length)}
                 className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-cocoa px-5 font-bold text-ivory transition hover:bg-[#4a3838] active:scale-95"
               >
                 <Shuffle className="size-4" aria-hidden="true" /> Shake Again
@@ -184,7 +183,7 @@ export function ShakeReveal() {
             </button>
           </div>
           <p className="mt-3 text-sm text-cocoa-soft">
-            Concept {qi + 1} of {conceptFamilies.length}
+            Question {qi + 1} of {feedbackQuestions.length}
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import {
-  conceptFamilies,
+  feedbackQuestions,
   principles,
   stages,
   type Block,
@@ -164,7 +164,7 @@ const th = "border border-cocoa/15 px-3 py-2 text-left align-top";
 
 export function StaticInteractive({ kind }: { kind: "shake" | "peel" | "gifts" | "capsule" }) {
   if (kind === "shake")
-    return <Points items={conceptFamilies.map((c) => ({ ...c, lead: `${c.lead}.` }))} />;
+    return <Points items={feedbackQuestions} />;
   if (kind === "peel")
     return (
       <div className="overflow-x-auto">
