@@ -417,7 +417,27 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Alzalabny et al. (2025) adapted low-fidelity prototyping for blind participants because design workshops often depend on visual materials. They first ran co-design workshops to develop a haptic prototyping toolkit and workshop structure, then used it in six workshops with 12 blind participants (11 totally blind, one with severe low vision) to design a tactile display. Their key lesson is that accessible co-design needs the whole workshop adapted, not just a swap of visual materials for tactile ones. I borrow this directly: tactile kits, individual design time before group merging, and a structure planned with BLV collaborators.",
+            text: "Alzalabny et al. (2025) adapted low-fidelity prototyping for blind participants because design workshops are inaccessible due to their reliance on visual design methods (i.e., sketches and storyboards). Some studies have modified prototyping processes by swapping materials for cardboard mockups, legos, rubber bands and tactile paper. However, design workshops are not just about materials; the structure, dynamics, and settings all matter.",
+          },
+          {
+            type: "p",
+            text: "The research in this paper was structured in two phases. They first ran four co-design workshops to develop a haptic prototyping toolkit and workshop structure, then used it in six workshops with 12 blind participants (11 totally blind, one with severe low vision) to design 2D tactile displays. Their key lesson is that accessible co-design needs the whole workshop adapted, not just a swap of visual materials.",
+          },
+          {
+            type: "p",
+            text: "This work is different from my co-design project because we aren’t designing assistive technology. We are designing a multisensory experience by exploring how BLV people can experience anticipation and surprise. Adapting some elements from Alzalabny et al. (2025), I would include these concepts into the mystery box co-design workshop:",
+          },
+          {
+            type: "callout",
+            title: "Concepts for the mystery box co-design workshop",
+            items: [
+              "Replace drawing and visual moodboards with physical objects, textures, and tactile materials.",
+              "Let participants physically assemble and modify mystery box packaging.",
+              "Provide individual exploration time before group brainstorming.",
+              "Use pairs or small groups so participants have opportunities to contribute.",
+              "Facilitators should describe materials and provide assistance without directing design decisions.",
+              "Give participants choices about materials, communication methods, and workshop activities.",
+            ],
           },
         ],
       },
