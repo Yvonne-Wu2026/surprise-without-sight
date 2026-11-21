@@ -81,8 +81,8 @@ export function Hero() {
             id="hero-title"
             className="mt-6 text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl xl:text-7xl"
           >
-            Joy of{" "}
-            <span className="text-grape">the Unknown</span>
+            Think Outside{" "}
+            <span className="text-grape">the Mystery Box</span>
           </h1>
           <p className="mt-7 text-lg leading-relaxed text-cocoa-soft sm:text-xl">
             {paperMeta.subtitle}.

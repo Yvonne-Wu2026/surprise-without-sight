@@ -194,7 +194,7 @@ export function Header({ route }: { route: Route }) {
             <circle cx="14" cy="27" r="1.6" fill="#5B4646" />
             <circle cx="26" cy="27" r="1.6" fill="#5B4646" />
           </svg>
-          <span className="hidden font-display text-base leading-none font-semibold min-[400px]:inline sm:text-lg">
+          <span className="hidden font-display text-base leading-none font-semibold whitespace-nowrap sm:inline sm:text-lg lg:hidden xl:inline">
             {paperMeta.title}
           </span>
         </a>

@@ -75,7 +75,7 @@ export function UnwrapGifts() {
       <p className="mt-1 text-sm text-cocoa-soft">
         {unwrapped.length} of {stages.length} stages unwrapped
       </p>
-      <ul className="relative mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
+      <ul className="relative mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
         {stages.map((a, i) => {
           const isOpen = unwrapped.includes(a.id);
           const isActive = active === a.id;
@@ -98,7 +98,7 @@ export function UnwrapGifts() {
                   className="w-24 sm:w-28"
                 />
                 <span className="mt-1 text-xs font-bold text-cocoa-soft">Stage {i + 1}</span>
-                <span className="font-display leading-tight font-semibold">{a.name}</span>
+                <span className="font-display leading-tight font-semibold break-words">{a.name}</span>
                 {isOpen && (
                   <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#23654F]">
                     <Check className="size-3" strokeWidth={3} aria-hidden="true" /> Unwrapped

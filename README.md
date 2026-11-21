@@ -1,4 +1,4 @@
-# Joy of the Unknown
+# Think Outside the Mystery Box
 
 HF720 participatory research and design assignment: a co-design protocol for making
 mystery boxes inclusive for blind and low-vision young adults.

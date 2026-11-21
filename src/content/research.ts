@@ -75,7 +75,7 @@ export type Chapter = {
 const img = (file: string) => `${import.meta.env.BASE_URL}images/${file}`;
 
 export const paperMeta = {
-  title: "Joy of the Unknown",
+  title: "Think Outside the Mystery Box",
   subtitle:
     "A co-design protocol for making mystery boxes an inclusive, fun experience for blind and low-vision young adults",
   kind: "Participatory Research and Design Project",
