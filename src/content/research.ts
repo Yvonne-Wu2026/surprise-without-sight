@@ -83,11 +83,11 @@ export const paperMeta = {
   course: "HF720 Internationalization and World-Ready Product Design",
   instructor: "Gary C. David, PhD",
   date: "November 2026",
-  philosophy: "Everyone deserves to experience the joy of discovery.",
+  philosophy: "What counts as ‘fun’ should be shaped by the people the experience is for.",
 };
 
 export const designQuestion =
-  "How might mystery boxes keep the thrill of not knowing while giving BLV players real agency, meaning they can choose, anticipate, reveal, collect and share on equal terms?";
+  "How might mystery boxes keep the thrill of not knowing while giving BLV young adults real agency, meaning they can choose, anticipate, reveal, collect and share on equal terms?";
 
 /* ── References ─────────────────────────────────────────────── */
 
@@ -320,7 +320,7 @@ export const chapters: Chapter[] = [
     theme: "blush",
     emblem: "question",
     preview:
-      "What mystery boxes are, why the culture around them leaves BLV players out, and the design question this project asks.",
+      "What mystery boxes are, why the culture around them leaves BLV young adults out, and the design question this project asks.",
     sections: [
       {
         id: "what",
@@ -383,7 +383,7 @@ export const chapters: Chapter[] = [
     paperNumber: "2",
     paperHeading: "What related work tells us",
     subtitle:
-      "No one has studied mystery boxes and BLV players directly, so the clues come from three neighboring areas.",
+      "No one has studied mystery boxes and BLV young adults directly, so the clues come from three neighboring areas.",
     theme: "lavender",
     emblem: "bulb",
     preview:
@@ -675,9 +675,9 @@ export const chapters: Chapter[] = [
     id: "limitations",
     number: "06",
     title: "The Honesty Box",
-    label: "Criticisms and limitations",
+    label: "Critiques and limitations",
     paperNumber: "5",
-    paperHeading: "Criticisms and limitations",
+    paperHeading: "Critiques and limitations",
     subtitle: "Discussing the limitations",
     theme: "sky",
     emblem: "eye",
@@ -686,7 +686,8 @@ export const chapters: Chapter[] = [
     sections: [
       {
         id: "weaknesses",
-        heading: "Critiques and weaknesses",
+        heading: "Critiques and limitations",
+        paperHeading: null,
         blocks: [
           {
             type: "points",
@@ -728,7 +729,7 @@ export const chapters: Chapter[] = [
     theme: "lilac",
     emblem: "moon",
     preview:
-      "Why mystery boxes are a good test case for participatory design, what the protocol combines, and what a successful result would show.",
+      "Why the unboxing experience leaves BLV young adults out, how the protocol responds, and what a more inclusive result could look like.",
     sections: [
       {
         id: "conclusion",

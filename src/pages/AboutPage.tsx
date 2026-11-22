@@ -52,7 +52,7 @@ export function AboutPage() {
             theme={themes.mint}
             block={{
               type: "p",
-              text: "I do not assume I know the answer, and I am a sighted designer. That is why this project is organized as a participatory process rather than a product brief. The question itself, and what counts as “fun”, should be shaped by the people the experience is for.",
+              text: "I do not assume to understand the experience of blind and visually impaired people. This project is organized as a participatory process, not a product brief or even a product proposal. The question itself, and what counts as “fun”, should be shaped by the people the experience is for.",
             }}
           />
         </div>
@@ -88,7 +88,7 @@ export function AboutPage() {
             off entirely.
           </li>
           <li>
-            Chapters are labelled with numbers and names as well as colors, and decorative sparkles
+            Chapters are labeled with numbers and names as well as colors, and decorative sparkles
             are hidden from screen readers. Photographs have full text descriptions.
           </li>
           <li>The Full Paper view prints cleanly or saves as a PDF.</li>
