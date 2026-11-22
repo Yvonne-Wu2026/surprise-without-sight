@@ -63,7 +63,7 @@ export type Chapter = {
   paperNumber: string;
   /** Heading used in the continuous Full Paper view. */
   paperHeading: string;
-  subtitle: string;
+  subtitle?: string;
   theme: ThemeKey;
   emblem: "question" | "heart" | "eye" | "spark" | "hands" | "bulb" | "moon";
   /** Short preview shown on the research card when a box opens. */
@@ -297,13 +297,12 @@ export const feedbackQuestions: (Point & { id: string })[] = [
   },
 ];
 
-/** Interview questions (Stage 2) and the provocation (Stage 3), for the capsule machine. */
+/** Stage 2 sample questions, for the capsule machine. */
 export const reflectionPrompts = [
-  "What does surprise mean to you?",
-  "When has a mystery purchase felt good?",
-  "When has a mystery purchase felt unfair or excluding?",
-  "What would “equal” feel like?",
-  "Imagine a mystery box shop in ten years where everyone plays on equal terms. What is different?",
+  "What makes opening a mystery box exciting?",
+  "How do you know what to do when opening unfamiliar packaging?",
+  "What do you like and not like about the mystery boxes you have interacted with so far?",
+  "What information would you want before opening the box, and what should remain a surprise?",
 ];
 
 /* ── Chapters ──────────────────────────────────────────────── */
@@ -474,7 +473,7 @@ export const chapters: Chapter[] = [
     label: "Participatory principles",
     paperNumber: "3",
     paperHeading: "Participatory principles",
-    subtitle: "Six aspects of participatory design, and what each one means for this project.",
+    subtitle: "Six aspects of participatory design",
     theme: "mint",
     emblem: "hands",
     preview:
@@ -493,11 +492,6 @@ export const chapters: Chapter[] = [
             type: "p",
             text: "The Interaction Design Foundation lists six key aspects of participatory design. The table shows what each one means in this project.",
             only: "paper",
-          },
-          {
-            type: "p",
-            text: "Peel each sticker to see what it looks like here.",
-            only: "chapter",
           },
           { type: "interactive", kind: "peel" },
         ],
@@ -731,7 +725,6 @@ export const chapters: Chapter[] = [
     label: "Conclusion",
     paperNumber: "6",
     paperHeading: "Conclusion",
-    subtitle: "Is the conflict between surprise and access real? Ask the people it affects.",
     theme: "lilac",
     emblem: "moon",
     preview:
@@ -743,7 +736,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Mystery boxes make a good test case for participatory design because their core appeal, surprise, seems to conflict with accessibility. Working with BLV young adults as co-designers is the most reliable way to find out whether that conflict is real, and which compromises people actually value. The protocol follows six stages with 12 participants: an accessibility needs assessment, exploring real mystery boxes together, building concepts with a tactile toolkit and then in pairs, testing each other’s prototypes, deciding which features to keep, change or remove, and reviewing the final concept to confirm their contributions are represented accurately. Its limits are real: a sighted facilitator, a small sample, the morality of mystery boxes, thin evidence and an untested plan. If it works, the result is not only a better product but a clearer view of how “fun” is defined, and by whom.",
+            text: "Mystery boxes are popular because people are not only drawn towards the content, but also the experience surrounding the unboxing. The anticipation relies heavily on sight, which can be exclusionary for BLV young adults. Surprise and accessibility can seem to be in conflict. Working with BLV young adults as co-designers is the most reliable way to find out whether that conflict is real, and which compromises people actually value. The proposed protocol follows six stages with 12 participants: an accessibility needs assessment, exploring real mystery boxes together, building concepts with a tactile toolkit and then in pairs, testing each other’s prototypes, deciding which features to keep, change or remove, and reviewing the final concept to confirm their contributions are represented accurately. There are many limitations, especially since I am a sighted person framing and writing a protocol for a product intended for BLV consumers. However, the result can potentially be a more inclusive product with a clearer view of how surprise and fun are defined with limited sight.",
           },
         ],
       },
@@ -753,7 +746,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Before closing the lid, turn the knob for a capsule. Each one holds a question from the Stage 2 interviews or the Stage 3 provocation.",
+            text: "Before closing the lid, turn the knob for a capsule.",
             only: "chapter",
           },
           { type: "interactive", kind: "capsule", only: "chapter" },

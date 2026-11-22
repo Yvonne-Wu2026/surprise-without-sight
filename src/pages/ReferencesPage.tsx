@@ -12,9 +12,6 @@ export function ReferencesPage() {
       <h1 tabIndex={-1} className="mt-2 text-5xl font-semibold outline-none">
         References
       </h1>
-      <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cocoa-soft">
-        All sources cited across the seven boxes, in one alphabetical list.
-      </p>
 
       <section
         aria-labelledby="all-refs"

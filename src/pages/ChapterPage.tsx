@@ -138,9 +138,11 @@ export function ChapterPage({ chapter }: { chapter: Chapter }) {
                 >
                   {chapter.title}
                 </h1>
-                <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cocoa-soft">
-                  {chapter.subtitle}
-                </p>
+                {chapter.subtitle && (
+                  <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cocoa-soft">
+                    {chapter.subtitle}
+                  </p>
+                )}
               </motion.header>
             </div>
           </div>
