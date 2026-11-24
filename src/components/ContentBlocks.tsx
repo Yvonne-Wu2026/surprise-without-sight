@@ -81,6 +81,11 @@ export function ContentBlock({
           {block.text && (
             <p className="mt-1.5 text-[1.075rem] leading-relaxed">{block.text}</p>
           )}
+          {block.points && (
+            <div className="mt-3">
+              <Points items={block.points} />
+            </div>
+          )}
           {block.items && (
             <ul className="mt-2 list-disc space-y-1.5 pl-6 text-[1.075rem] leading-relaxed">
               {block.items.map((item) => (

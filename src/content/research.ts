@@ -22,7 +22,7 @@ export type FigureImage = { src: string; alt: string; width: number; height: num
 
 type BlockBody =
   | { type: "p"; text: string }
-  | { type: "callout"; title: string; text?: string; items?: string[] }
+  | { type: "callout"; title: string; text?: string; items?: string[]; points?: Point[] }
   | { type: "quote"; text: string; attribution?: string }
   | { type: "figure"; images: FigureImage[]; caption: string }
   | { type: "list"; items: string[]; ordered?: boolean }
@@ -409,7 +409,33 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Bolesnikov, Kang and Girouard (2022) interviewed 15 BLV people about board and card games. They report themes about the properties and outcomes of inaccessible and accessible games. Their discussion of accessible games includes rulebooks that are available in accessible formats, such as Braille, and, for low-vision players, large text and high-contrast pieces. They also note that most BLV gaming accessibility research has focused on digital games, so tabletop and physical play remain under-studied. A mystery box is a physical, tabletop-adjacent object, which makes this literature the most useful starting point for the “properties of accessible play” that I want participants to refine.",
+            text: "Bolesnikov et al. (2022) explored the tabletop gaming experiences of blind and low-vision players to identify how inaccessible design can affect autonomy, social participation and enjoyment. They conducted 15 semi-structured interviews with 15 BLV participants to gather their experiences and thoughts on the accessibility of tabletop games. From these interviews, they found 4 themes broken into subcategories that I try to incorporate into my co-design protocol.",
+          },
+          {
+            type: "callout",
+            title: "Themes",
+            points: [
+              {
+                lead: "Properties of inaccessible games.",
+                text: "Participants identified barriers before the game even begins: visually dependent instructions, small text, poor contrast, indistinct tactile elements, and absence of sound.",
+              },
+              {
+                lead: "Outcomes of inaccessible games.",
+                text: "Participants reported outcomes such as dependency on others, gaming abandonment, unfair play, and adaptation techniques to overcome barriers.",
+              },
+              {
+                lead: "Properties of accessible games.",
+                text: "Authors reported ideas to consider for inclusive design, using barriers defined by participants from the first theme. They mentioned rulebooks available in accessible formats: Braille, large text, high contrast.",
+              },
+              {
+                lead: "Outcomes of accessible games.",
+                text: "Accessible recreation supports meaningful participation.",
+              },
+            ],
+          },
+          {
+            type: "p",
+            text: "Although mystery boxes aren’t the same as tabletop games, both involve physical interactions and recreational engagement. These findings highlight the importance of considering accessibility not only from a functional perspective but also from an emotional perspective. An accessible mystery box should allow individuals to independently explore its contents while preserving anticipation and excitement.",
           },
           {
             type: "callout",
