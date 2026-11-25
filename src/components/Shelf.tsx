@@ -165,7 +165,7 @@ function ShelfBox({ chapter, index }: { chapter: Chapter; index: number }) {
                   style={{ background: theme.soft }}
                 >
                   <StarShape className="decor absolute -top-2 -right-1 size-5" fill={theme.shade} />
-                  <p className="text-[0.95rem] leading-relaxed">{chapter.preview}</p>
+                  <Preview preview={chapter.preview} className="text-[0.95rem] leading-relaxed" />
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     <a
                       href={href.chapter(chapter.id)}
@@ -193,6 +193,18 @@ function ShelfBox({ chapter, index }: { chapter: Chapter; index: number }) {
         )}
       </div>
     </li>
+  );
+}
+
+/** A box's preview: a sentence, or a short bulleted list. */
+function Preview({ preview, className }: { preview: string | string[]; className: string }) {
+  if (typeof preview === "string") return <p className={className}>{preview}</p>;
+  return (
+    <ul className={`list-disc space-y-1 pl-5 ${className}`}>
+      {preview.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
   );
 }
 
@@ -236,7 +248,7 @@ export function Shelf() {
                   Chapter {c.number} · {c.label}
                 </p>
                 <h3 className="mt-1 text-2xl font-semibold">{c.title}</h3>
-                <p className="mt-2 leading-relaxed">{c.preview}</p>
+                <Preview preview={c.preview} className="mt-2 leading-relaxed" />
                 <a
                   className="mt-3 inline-flex items-center gap-1 font-bold underline underline-offset-4"
                   href={href.chapter(c.id)}

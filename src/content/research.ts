@@ -67,7 +67,7 @@ export type Chapter = {
   theme: ThemeKey;
   emblem: "question" | "heart" | "eye" | "spark" | "hands" | "bulb" | "moon";
   /** Short preview shown on the research card when a box opens. */
-  preview: string;
+  preview: string | string[];
   sections: Section[];
   references: Reference[];
 };
@@ -160,7 +160,7 @@ export const principles: { id: string; name: string; theme: ThemeKey; definition
     name: "Inclusion",
     theme: "blush",
     definition:
-      "12 BLV young adults (about 18 to 30): 2 blind and 10 with varying levels of low vision, including collectors and people who have never opened a mystery box. An accessibility needs assessment sets each person's preferred formats and accommodations.",
+      "12 BLV young adults: 2 blind and 10 with varying levels of low vision, including collectors and people who have never opened a mystery box. An accessibility needs assessment sets each person's preferred formats and accommodations.",
   },
   {
     id: "collaboration",
@@ -304,8 +304,11 @@ export const chapters: Chapter[] = [
       "Mystery boxes sell the thrill of not knowing. Almost every ritual around them assumes sight.",
     theme: "blush",
     emblem: "question",
-    preview:
-      "What mystery boxes are, why the culture around them leaves BLV young adults out, and the design question this project asks.",
+    preview: [
+      "What mystery boxes are",
+      "How they might be exclusionary",
+      "Opportunity for a participatory process",
+    ],
     sections: [
       {
         id: "what",
@@ -353,7 +356,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "There are many myths and misconceptions around blindness that I am still learning about. Although I have high myopia (if I take my glasses off, the Google doc I am typing on becomes white with lines of black blobs), I need to make clear that I do not assume to understand the experience of blind and visually impaired people. This project is organized as a participatory process, not a product brief or even a product proposal. The question itself, and what counts as “fun”, should be shaped by the people the experience is for. However, a bigger question that comes up is: Do current mystery boxes need “fixing?” The online research I have done seems to tell me that blind and visually impaired people enjoy mystery boxes and collecting items; just in different ways than sighted people. According to the Iowa Department for the Blind (n.d.), “Only approximately 18 percent of people who are legally blind are classified as being totally blind and the majority of blind people can still differentiate between light and dark.” Knowing this, is there even an opportunity to design a better experience for the audience in question? This is why I would leverage a participatory design process with direct stakeholder participation.",
+            text: "There are many myths and misconceptions around blindness that I am still learning about. Although I have high myopia (if I take my glasses off, the Google doc I am typing on becomes white with lines of black blobs), I need to make clear that I do not assume to understand the experience of blind and visually impaired people. This project is organized as a participatory process, not a product brief or even a product proposal. The question itself, and what counts as “fun”, should be shaped by the people the experience is for. However, a bigger question that comes up is: Do current mystery boxes need “fixing”? The online research I have done seems to tell me that blind and visually impaired people enjoy mystery boxes and collecting items; just in different ways than sighted people. According to the Iowa Department for the Blind (n.d.), “Only approximately 18 percent of people who are legally blind are classified as being totally blind and the majority of blind people can still differentiate between light and dark.” Knowing this, is there even an opportunity to design a better experience for the audience in question? This is why I would leverage a participatory design process with direct stakeholder participation.",
           },
         ],
       },
@@ -371,8 +374,11 @@ export const chapters: Chapter[] = [
       "No one has studied mystery boxes and BLV young adults directly, so the clues come from two neighboring areas.",
     theme: "lavender",
     emblem: "bulb",
-    preview:
-      "Evidence from tabletop game accessibility and co-design with blind participants, and what each lends this protocol.",
+    preview: [
+      "Exploring potential related works",
+      "Rethinking visual materials for BLV participants",
+      "Delving into some co-design methods",
+    ],
     sections: [
       {
         id: "gap",
@@ -380,7 +386,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "I searched for work on mystery boxes and BLV individuals but found nothing substantial aside from Reddit threads on “blind boxes” and collecting. Research on mystery boxes seems to focus on marketing and the regulation of gambling-like mechanics, not really towards inclusivity. There is an interesting post I came across that isn’t exactly like mystery boxes, though I want to mention it because they have some applicable elements. Jaime Brown wrote a blog about creating story boxes for students with visual impairments as a way to enhance the storytelling experience through multisensory methods. I like the idea of including different sensory elements in storytelling; a stuffed animal, adding movement, using story support apps for sounds, and even taste if relevant. I also love that storytelling is framed as an interactive experience that involves both teachers and students. You can read more about these story boxes by clicking this link: [Easy to Create Story Boxes](https://www.pathstoliteracy.org/easy-create-story-boxes/).",
+            text: "I searched for work on mystery boxes and BLV individuals but found nothing substantial aside from Reddit threads on “blind boxes” and collecting. Research on mystery boxes seems to focus on marketing and the regulation of gambling-like mechanics, not really towards inclusivity. There is an interesting post I came across that isn’t exactly like mystery boxes, though I want to mention it because they have some applicable elements. Jaime Brown (n.d.) wrote a blog about creating story boxes for students with visual impairments as a way to enhance the storytelling experience through multisensory methods. I like the idea of including different sensory elements in storytelling; a stuffed animal, adding movement, using story support apps for sounds, and even taste if relevant. I also love that storytelling is framed as an interactive experience that involves both teachers and students. You can read more about these story boxes by clicking this link: [Easy to Create Story Boxes](https://www.pathstoliteracy.org/easy-create-story-boxes/).",
           },
           {
             type: "p",
@@ -440,7 +446,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "Alzalabny et al. (2025) adapted low-fidelity prototyping for blind participants because design workshops are inaccessible due to their reliance on visual design methods (i.e., sketches and storyboards). Some studies have modified prototyping processes by swapping materials for cardboard mockups, legos, rubber bands and tactile paper. However, design workshops are not just about materials; the structure, dynamics, and settings all matter.",
+            text: "Alzalabny et al. (2025) adapted low-fidelity prototyping for blind participants because design workshops are inaccessible due to their reliance on visual design methods (i.e., sketches and storyboards). Some studies have modified prototyping processes by swapping materials for cardboard mockups, LEGO, rubber bands and tactile paper. However, design workshops are not just about materials; the structure, dynamics, and settings all matter.",
           },
           {
             type: "p",
@@ -477,8 +483,9 @@ export const chapters: Chapter[] = [
     subtitle: "Six aspects of participatory design",
     theme: "mint",
     emblem: "hands",
-    preview:
-      "The Interaction Design Foundation's six aspects of participatory design, from inclusion to audience advocacy, applied to mystery boxes.",
+    preview: [
+      "Applying the Interaction Design Foundation’s principles to mystery boxes",
+    ],
     sections: [
       {
         id: "aspects",
@@ -508,11 +515,12 @@ export const chapters: Chapter[] = [
     paperNumber: "4",
     paperHeading: "The protocol, stage by stage",
     subtitle:
-      "Six stages, from preparation to governance. This box covers getting ready, listening, and designing together.",
+      "Six stages, from preparation to governance. This box covers getting ready, exploring, and designing together.",
     theme: "butter",
     emblem: "spark",
-    preview:
-      "An overview of all six stages, then preparation and framing, exploring real mystery boxes together, and tactile co-design in pairs.",
+    preview: [
+      "Unwrapping stages 1 to 3 of our protocol: preparation, framing and exploring",
+    ],
     sections: [
       {
         id: "overview",
@@ -536,7 +544,7 @@ export const chapters: Chapter[] = [
         blocks: [
           {
             type: "p",
-            text: "12 participants (2 blind, 10 with varying levels of low vision) participate in an accessibility needs assessment to identify preferred communication formats, assistive technologies, and accommodations.",
+            text: "Twelve participants (2 blind, 10 with varying levels of low vision) participate in an accessibility needs assessment to identify preferred communication formats, assistive technologies, and accommodations.",
           },
           {
             type: "p",
@@ -607,8 +615,9 @@ export const chapters: Chapter[] = [
       "Testing prototypes together, refining them around participant priorities, and closing the loop transparently.",
     theme: "peach",
     emblem: "heart",
-    preview:
-      "Pairs test each other’s prototypes, participants decide what changes next, and the final concept goes back to them for review.",
+    preview: [
+      "Diving into stages 4 to 6",
+    ],
     sections: [
       {
         id: "stage-4",
@@ -682,8 +691,9 @@ export const chapters: Chapter[] = [
     subtitle: "Discussing the limitations",
     theme: "sky",
     emblem: "eye",
-    preview:
-      "A sighted facilitator, a small sample, the morality of mystery boxes, thin evidence, and an untested plan.",
+    preview: [
+      "Getting into some of the critiques and limitations of the protocol",
+    ],
     sections: [
       {
         id: "weaknesses",
@@ -699,7 +709,7 @@ export const chapters: Chapter[] = [
               },
               {
                 lead: "A small sample size can’t represent a diverse community.",
-                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. 12 participants can’t speak for all of them, and recruiting through organizations tends to reach people who are already connected and comfortable with research. Additionally, attitudes to mystery boxes, gambling and disability differ across countries and legal contexts.",
+                text: "Blindness and low vision cover many different conditions, ages, onset times, assistive technologies and cultures. Twelve participants can’t speak for all of them, and recruiting through organizations tends to reach people who are already connected and comfortable with research. Additionally, attitudes to mystery boxes, gambling and disability differ across countries and legal contexts.",
               },
               {
                 lead: "Morality of mystery boxes.",
@@ -729,8 +739,9 @@ export const chapters: Chapter[] = [
     paperHeading: "Conclusion",
     theme: "lilac",
     emblem: "moon",
-    preview:
-      "Why the unboxing experience leaves BLV young adults out, how the protocol responds, and what a more inclusive result could look like.",
+    preview: [
+      "Wrapping everything up with closing thoughts",
+    ],
     sections: [
       {
         id: "conclusion",
