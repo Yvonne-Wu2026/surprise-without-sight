@@ -119,12 +119,6 @@ const R = {
     after: ". Paths to Literacy.",
     url: "https://www.pathstoliteracy.org/easy-create-story-boxes/",
   },
-  delgado: {
-    id: "delgado-2021",
-    sort: "Delgado",
-    before:
-      "Delgado, F., Yang, S., Madaio, M., & Yang, Q. (2021). Stakeholder participation in AI: Beyond “add diverse stakeholders and stir.” As cited in Odendaal & Zavala Barreda (2024); not read directly.",
-  },
   iowa: {
     id: "iowa-dept-blind",
     sort: "Iowa Department for the Blind",
@@ -140,15 +134,6 @@ const R = {
     italic: "Participatory design",
     after: ".",
     url: "https://ixdf.org/literature/topics/participatory-design",
-  },
-  odendaal: {
-    id: "odendaal-2024",
-    sort: "Odendaal",
-    before:
-      "Odendaal, A., & Zavala Barreda, K. (2024). Imagining inclusive technological futures through participatory board game design. ",
-    italic: "The Design Journal, 27",
-    after: "(2), 291–311.",
-    url: "https://doi.org/10.1080/14606925.2024.2304409",
   },
   parallel: {
     id: "parallel",
@@ -383,11 +368,11 @@ export const chapters: Chapter[] = [
     paperNumber: "2",
     paperHeading: "What related work tells us",
     subtitle:
-      "No one has studied mystery boxes and BLV young adults directly, so the clues come from three neighboring areas.",
+      "No one has studied mystery boxes and BLV young adults directly, so the clues come from two neighboring areas.",
     theme: "lavender",
     emblem: "bulb",
     preview:
-      "Evidence from tabletop game accessibility, co-design with blind participants, and a participatory “design relay”, and what each lends this protocol.",
+      "Evidence from tabletop game accessibility and co-design with blind participants, and what each lends this protocol.",
     sections: [
       {
         id: "gap",
@@ -399,7 +384,7 @@ export const chapters: Chapter[] = [
           },
           {
             type: "p",
-            text: "In the next three sections, I explore “related” works. Related is used loosely as I couldn’t find research or case studies done on mystery boxes for BLV individuals, specifically young adults.",
+            text: "In the next two sections, I explore “related” works. Related is used loosely as I couldn’t find research or case studies done on mystery boxes for BLV individuals, specifically young adults.",
           },
         ],
       },
@@ -479,18 +464,8 @@ export const chapters: Chapter[] = [
           },
         ],
       },
-      {
-        id: "relay",
-        heading: "A participatory relay structure for design",
-        blocks: [
-          {
-            type: "p",
-            text: "Odendaal and Zavala Barreda (2024) ran four online workshops in which different cohorts of 5 to 15 participants each continued the board-game design where the previous cohort stopped. Across the project, 39 people took part. The authors argue that this “design relay” produced polyvocality, because each group had to engage with, question and build on earlier contributions. They are also candid about two limitations that I treat as design constraints for my own protocol: facilitators ended up with an overbearing editorial role that kept power with the designers, and participants were not involved in the reflective practice itself.",
-          },
-        ],
-      },
     ],
-    references: [R.alzalabny, R.bolesnikov, R.brown, R.odendaal],
+    references: [R.alzalabny, R.bolesnikov, R.brown],
   },
   {
     id: "principles",
